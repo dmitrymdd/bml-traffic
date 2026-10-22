@@ -1,18 +1,22 @@
 <!doctype html>
-<!-- BML Traffic. MIT License, see LICENSE. Embedded font: subset of Pixar One, (c) Vasily Shishkin 2025, free for personal and commercial use, shishkin.ru. -->
+<!-- BML Traffic. MIT License, see LICENSE. Font: Pixar One © 2012 Vasily Shishkin, free for personal and commercial use, https://shishkin.ru -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BML Traffic</title>
 <meta name="description" content="Biham–Middleton–Levine traffic model: an interactive cellular automaton simulator.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 3' shape-rendering='crispEdges'%3E%3Crect width='3' height='3' fill='%23101214'/%3E%3Cpath fill='%234aa8c9' d='M0 0h1v1H0zM2 1h1v1H2zM1 2h1v1H1z'/%3E%3Cpath fill='%23e18147' d='M1 0h1v1H1zM0 1h1v1H0zM2 2h1v1H2z'/%3E%3C/svg%3E">
 <style>
-/* Pixar One by Vasily Shishkin (free for personal and commercial use, shishkin.ru), subset: Latin, Cyrillic. */
+/* Pixar One © 2012 Vasily Shishkin, free for personal and commercial use, https://shishkin.ru. Subset: Latin, Cyrillic. */
 @font-face { font-family: "Pixar One"; font-weight: 400; src: url(data:font/woff2;base64,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) format("woff2"); font-display: block; }
 @font-face { font-family: "Pixar One"; font-weight: 700; src: url(data:font/woff2;base64,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) format("woff2"); font-display: block; }
 
-/* Layout: field and charts on the left, a flat outlined control column on the right with a pinned header.
-   Flat pixel style: 2px lines, no fills, no bevels; colour comes only from the cars. */
+/* Field and charts on the left, an outlined control column with a pinned header on the right.
+   Flat pixel style: square outlines, no fills or bevels; colour comes only from the cars. */
+
+
+/* ── Tokens ─────────────────────────────────────────────── */
 :root {
   --bg: #ececec;
   --fg: #141414;
@@ -38,6 +42,8 @@
   color-scheme: dark;
 }
 
+
+/* ── Base ───────────────────────────────────────────────── */
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html { -webkit-text-size-adjust: 100%; }
@@ -49,8 +55,22 @@ body {
   padding-block: 16px 32px;
   -webkit-font-smoothing: antialiased;
 }
+/* keeps scrolled content out from under the notch */
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+h1 { margin: 0; font-weight: 700; font-size: 28px; line-height: 32px; letter-spacing: 0.04em; white-space: nowrap; }
+h2 { margin: 0; font: inherit; text-transform: uppercase; }
+kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
 
+/* pixel scrollbar: square thumb, no arrows; Firefox gets the thin native one */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: transparent; border-left: 3px solid var(--line); }
+::-webkit-scrollbar-thumb { background: var(--muted); border: 3px solid var(--bg); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--fg); }
+::-webkit-scrollbar-button, ::-webkit-scrollbar-corner { display: none; }
+@supports not selector(::-webkit-scrollbar) { html, .ctrl { scrollbar-width: thin; scrollbar-color: var(--muted) transparent; } }
+
+
+/* ── Layout ─────────────────────────────────────────────── */
 .layout { max-width: 1480px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 336px; gap: 24px; align-items: start; }
 .stage { grid-column: 1; grid-row: 1; display: grid; gap: 24px; min-width: 0; }
 .side {
@@ -61,17 +81,16 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   display: flex; flex-direction: column;
   border: 3px solid var(--line);
 }
-@media (max-width: 960px) {
-  .layout { display: flex; flex-direction: column; align-items: stretch; gap: 20px; }
-  .side { display: contents; }
-  .head { order: 0; border: 3px solid var(--line); }
-  .stage { order: 1; width: 100%; }
-  .ctrl { order: 2; border: 3px solid var(--line); }
-}
+.head { flex: none; padding: 14px; display: grid; gap: 14px; border-bottom: 3px solid var(--line); }
+.ctrl { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+.group { padding: 14px; display: grid; gap: 10px; border-top: 3px solid var(--line); }
+.group:first-child { border-top: 0; }
+.panel { padding: 14px; display: grid; gap: 12px; min-width: 0; border: 3px solid var(--line); }
+.panel-head { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; }
+.panel-head .row { flex-wrap: wrap; }
 
-/* ---------- controls ---------- */
-.lab { color: var(--muted); }
-.gt { color: var(--fg); text-transform: uppercase; }
+
+/* ── Buttons ────────────────────────────────────────────── */
 button {
   font: inherit; color: var(--fg); background: transparent;
   border: 3px solid var(--muted); border-radius: 0;
@@ -91,15 +110,20 @@ button.rec[aria-pressed="true"] { background: var(--bad); border-color: var(--ba
 .seg button { flex: 1 1 0; min-width: 0; padding-inline: 4px; }
 .seg button + button { margin-left: -3px; }
 .seg button:hover { position: relative; }
-.seg button[data-tool="1"][aria-pressed="true"] { background: var(--y); border-color: var(--y); color: var(--y-ink); }
-.seg button[data-tool="2"][aria-pressed="true"] { background: var(--b); border-color: var(--b); color: var(--b-ink); }
+.bar .seg button { flex: none; padding-inline: 8px; }
+.panel-head .seg button { flex: none; padding-inline: 10px; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips button { min-height: 28px; padding: 2px 8px; }
 
+
+/* ── Fields & sliders ───────────────────────────────────── */
 select, input[type="text"], input[type="number"] {
   font: inherit; width: 100%; min-width: 0; border-radius: 0;
   background-color: transparent; color: var(--fg); border: 3px solid var(--line);
   padding: 4px 8px; min-height: 32px; -webkit-appearance: none; appearance: none;
 }
 select:hover, input[type="text"]:hover, input[type="number"]:hover { border-color: var(--muted); }
+/* pixel arrow drawn from three gradient bars */
 select {
   padding-right: 30px; cursor: pointer;
   background-image: linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor);
@@ -110,12 +134,6 @@ select {
 select option, select optgroup { background: var(--bg); color: var(--fg); }
 input[type="number"] { -moz-appearance: textfield; }
 input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-
-input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 24px; background: transparent; margin: 0; cursor: pointer; }
-input[type="range"]::-webkit-slider-runnable-track { height: 2px; background: var(--muted); }
-input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 10px; height: 20px; margin-top: -9px; background: var(--y); border: 0; border-radius: 0; }
-input[type="range"]::-moz-range-track { height: 2px; background: var(--muted); }
-input[type="range"]::-moz-range-thumb { width: 10px; height: 20px; background: var(--y); border: 0; border-radius: 0; }
 
 input[type="checkbox"] {
   -webkit-appearance: none; appearance: none; width: 18px; height: 18px; margin: 0; flex: none; cursor: pointer; border-radius: 0;
@@ -128,19 +146,31 @@ input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
 input[type="color"]::-webkit-color-swatch { border: 0; border-radius: 0; }
 input[type="color"]::-moz-color-swatch { border: 0; border-radius: 0; }
 
-/* ---------- side column ---------- */
-.head { flex: none; padding: 14px; display: grid; gap: 14px; border-bottom: 3px solid var(--line); }
-h1 { margin: 0; font-family: var(--font); font-weight: 700; font-size: 28px; line-height: 32px; letter-spacing: 0.04em; white-space: nowrap; }
+.field-l { display: grid; gap: 4px; min-width: 0; }
+.field-l .lab { display: flex; justify-content: space-between; gap: 8px; }
+.field-l .lab output { color: var(--fg); }
+.check { display: flex; gap: 10px; align-items: center; cursor: pointer; }
+
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 24px; background: transparent; margin: 0; cursor: pointer; }
+input[type="range"]::-webkit-slider-runnable-track { height: 2px; background: var(--muted); }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 10px; height: 20px; margin-top: -9px; background: var(--y); border: 0; border-radius: 0; }
+input[type="range"]::-moz-range-track { height: 2px; background: var(--muted); }
+input[type="range"]::-moz-range-thumb { width: 10px; height: 20px; background: var(--y); border: 0; border-radius: 0; }
+
+
+/* ── Header ─────────────────────────────────────────────── */
+.brand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
 h1 .acc { color: var(--y-line); }
 .bar { display: flex; gap: 6px; }
 .bar .grow { flex: 1 1 0; }
 .bar .seg { flex: none; }
-.bar .seg button { flex: none; padding-inline: 8px; }
 .gauges { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .gauge { display: grid; gap: 4px; min-width: 0; }
 .big { font-size: 28px; letter-spacing: 0.02em; line-height: 32px; white-space: nowrap; overflow: hidden; font-variant-numeric: tabular-nums; }
-.meter { height: 6px; background: var(--line); }
-.meter > i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, var(--y) 0 6px, transparent 6px 8px); }
+.meter, .progress { height: 6px; background: var(--line); }
+.meter > i, .progress > i { display: block; height: 100%; width: 0; }
+.meter > i { background: repeating-linear-gradient(90deg, var(--y) 0 6px, transparent 6px 8px); }
+.progress > i { background: repeating-linear-gradient(90deg, var(--b) 0 6px, transparent 6px 8px); }
 .state { display: flex; align-items: center; gap: 10px; min-width: 0; }
 .state::before { content: ""; width: 12px; height: 12px; flex: none; background: var(--muted); }
 .state[data-s="free"]::before { background: var(--ok); }
@@ -150,31 +180,8 @@ h1 .acc { color: var(--y-line); }
 .state[data-s="pending"]::before { background: var(--ok); opacity: 0.5; }
 .state span { min-width: 0; overflow-wrap: anywhere; }
 
-.ctrl { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
-/* Pixel scrollbar everywhere (page and side menu): square thumb, no arrows, no rounding. Firefox cannot style it fully, so it gets the thin native one. */
-::-webkit-scrollbar { width: 12px; height: 12px; }
-::-webkit-scrollbar-track { background: transparent; border-left: 3px solid var(--line); }
-::-webkit-scrollbar-thumb { background: var(--muted); border: 3px solid var(--bg); border-radius: 0; }
-::-webkit-scrollbar-thumb:hover { background: var(--fg); }
-::-webkit-scrollbar-button, ::-webkit-scrollbar-corner { display: none; }
-@supports not selector(::-webkit-scrollbar) { html, .ctrl { scrollbar-width: thin; scrollbar-color: var(--muted) transparent; } }
-@media (max-width: 960px) { .ctrl { overflow: visible; } }
-.group { padding: 14px; display: grid; gap: 10px; border-top: 3px solid var(--line); }
-.group:first-child { border-top: 0; }
-.field-l { display: grid; gap: 4px; min-width: 0; }
-.field-l .lab { display: flex; justify-content: space-between; gap: 8px; }
-.field-l .lab output { color: var(--fg); }
-.row { display: flex; gap: 6px; align-items: center; min-width: 0; }
-.row > .grow { flex: 1 1 0; min-width: 0; }
-.chips { display: flex; gap: 6px; flex-wrap: wrap; }
-.chips button { min-height: 28px; padding: 2px 8px; }
-.hint { margin: 0; color: var(--muted); }
-.check { display: flex; gap: 10px; align-items: center; cursor: pointer; }
-.swatches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-.swatches label { display: grid; gap: 4px; justify-items: start; }
-.arr { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; background: currentColor;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath d='M0 3h8v2H0zM4 1h2v1H4zM5 2h2v1H5zM5 5h2v1H5zM4 6h2v1H4z'/%3E%3C/svg%3E") center / 16px 16px no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath d='M0 3h8v2H0zM4 1h2v1H4zM5 2h2v1H5zM5 5h2v1H5zM4 6h2v1H4z'/%3E%3C/svg%3E") center / 16px 16px no-repeat; }
-.arr.down { transform: rotate(90deg); }
+
+/* ── Car tiles ──────────────────────────────────────────── */
 .tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .tile { position: relative; min-width: 0; display: grid; gap: 6px; }
 .pick { width: 100%; display: grid; gap: 6px; padding: 6px 4px; justify-items: start; text-align: left; border-color: var(--line); }
@@ -183,22 +190,19 @@ h1 .acc { color: var(--y-line); }
 .pick .tl .arr { flex: none; }
 .pick:hover { background: transparent; border-color: var(--muted); }
 .pick[aria-pressed="true"], .pick:active { background: transparent; color: var(--fg); border-color: var(--fg); box-shadow: 0 0 0 2px var(--fg); }
+/* the colour input is stretched invisibly over the pen icon */
 .edit { position: relative; width: 100%; height: 26px; display: grid; place-items: center; background: transparent; border: 3px solid var(--line); cursor: pointer; }
 .edit:hover { border-color: var(--fg); }
 .edit:focus-within { outline: 2px dashed var(--fg); outline-offset: 2px; }
 .edit input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; border: 0; padding: 0; }
 .pen { width: 12px; height: 12px; background: var(--fg); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath d='M5 0h2v1H5zM4 1h4v1H4zM3 2h4v1H3zM2 3h4v1H2zM1 4h4v1H1zM1 5h3v1H1zM0 6h2v2H0z'/%3E%3C/svg%3E") center / 12px 12px no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath d='M5 0h2v1H5zM4 1h4v1H4zM3 2h4v1H3zM2 3h4v1H2zM1 4h4v1H1zM1 5h3v1H1zM0 6h2v2H0z'/%3E%3C/svg%3E") center / 12px 12px no-repeat; pointer-events: none; }
-.brand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
-.by { color: color-mix(in srgb, var(--fg) 62%, var(--bg)); }
-.about { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-.arr-r { color: var(--y-line); }
-.arr-d { color: var(--b-line); }
 .warn { display: grid; gap: 8px; padding: 8px 10px; border: 3px solid var(--bad); }
 .warn p { margin: 0; }
 .gif-out { display: grid; gap: 8px; justify-items: start; }
 .gif-out img { width: 192px; max-width: 100%; border: 3px solid var(--line); image-rendering: pixelated; }
 
-/* ---------- stage ---------- */
+
+/* ── Stage ──────────────────────────────────────────────── */
 .fieldbox { display: grid; place-items: center; min-width: 0; }
 .frame { border: 3px solid var(--line); line-height: 0; max-width: 100%; }
 #grid { display: block; image-rendering: pixelated; image-rendering: crisp-edges; max-width: 100%; }
@@ -206,23 +210,15 @@ h1 .acc { color: var(--y-line); }
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 3px solid var(--line); }
 .stat { padding: 10px 14px; display: grid; gap: 4px; min-width: 0; align-content: start; }
 .stat + .stat { border-left: 3px solid var(--line); }
-.stat .big { font-size: 28px; }
 .stat .two { display: grid; gap: 2px; font-variant-numeric: tabular-nums; }
-@media (max-width: 720px) {
-  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .stat:nth-child(3) { border-left: 0; }
-  .stat:nth-child(n+3) { border-top: 3px solid var(--line); }
-}
-.panel { padding: 14px; display: grid; gap: 12px; min-width: 0; border: 3px solid var(--line); }
-.panel-head { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: space-between; }
-.panel-head .row { flex-wrap: wrap; }
-.panel-head .seg button { flex: none; padding-inline: 10px; }
-h2 { margin: 0; font: inherit; text-transform: uppercase; }
+
+
 .chart-box { position: relative; min-width: 0; }
 canvas.chart { display: block; width: 100%; }
 #chart { height: 220px; }
 #phase { height: 260px; }
-.chart-empty { position: absolute; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0; white-space: nowrap; margin: 0; color: var(--muted); pointer-events: none; }
+/* placeEmpty() sets left, right and top; translateY keeps any number of lines centred on top */
+.chart-empty { position: absolute; max-width: 40em; margin: 0 auto; padding: 0 16px; text-align: center; color: var(--muted); pointer-events: none; transform: translateY(-50%); }
 .list { list-style: none; margin: 0; padding: 0; display: grid; }
 .list li { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto auto; gap: 10px; align-items: center; padding: 4px 0; border-top: 3px solid var(--line); }
 .list li:first-child { border-top: 0; }
@@ -231,45 +227,90 @@ canvas.chart { display: block; width: 100%; }
 .list .res { color: var(--muted); text-align: right; }
 .list li.off { opacity: 0.45; }
 .list button { min-height: 26px; padding: 1px 8px; }
-@media (max-width: 560px) { .list li { grid-template-columns: 14px minmax(0, 1fr) auto; } .list .res { grid-column: 2 / 4; text-align: left; } }
 .pform { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; }
-.progress { height: 6px; background: var(--line); }
-.progress > i { display: block; height: 100%; width: 0; background: repeating-linear-gradient(90deg, var(--b) 0 6px, transparent 6px 8px); }
+
+
 .about { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 28px; }
 .about h3 { margin: 0 0 8px; font: inherit; text-transform: uppercase; }
 .about p { margin: 0; max-width: 60ch; }
 .about p + p { margin-top: 8px; }
 .about a { color: var(--b-line); }
-kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
+.foot { max-width: 1480px; margin: 24px auto 0; font-size: 12px; line-height: 16px; overflow-wrap: anywhere; }
+.foot p { margin: 0; }
+.foot a { color: inherit; }
+.foot a:hover { color: var(--fg); }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 20; padding: 6px 14px; max-width: calc(100% - 32px); background: var(--fg); color: var(--bg); }
+
+
+/* ── Utilities ──────────────────────────────────────────── */
+.lab { color: var(--muted); }
+.by, .foot { color: color-mix(in srgb, var(--fg) 62%, var(--bg)); }
+.gt { color: var(--fg); text-transform: uppercase; }
+.hint { margin: 0; color: var(--muted); }
+.row { display: flex; gap: 6px; align-items: center; min-width: 0; }
+.row > .grow { flex: 1 1 0; min-width: 0; }
+.arr { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath d='M0 3h8v2H0zM4 1h2v1H4zM5 2h2v1H5zM5 5h2v1H5zM4 6h2v1H4z'/%3E%3C/svg%3E") center / 16px 16px no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Cpath d='M0 3h8v2H0zM4 1h2v1H4zM5 2h2v1H5zM5 5h2v1H5zM4 6h2v1H4z'/%3E%3C/svg%3E") center / 16px 16px no-repeat; }
+.arr.down { transform: rotate(90deg); }
+.arr-r { color: var(--y-line); }
+.arr-d { color: var(--b-line); }
+
+
+/* ── Media queries ──────────────────────────────────────── */
+@media (max-width: 960px) {
+  .layout { display: flex; flex-direction: column; align-items: stretch; gap: 20px; }
+  .side { display: contents; }
+  .head { order: 0; border: 3px solid var(--line); }
+  .stage { order: 1; width: 100%; }
+  .ctrl { order: 2; border: 3px solid var(--line); overflow: visible; }
+}
+@media (max-width: 720px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:nth-child(3) { border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 3px solid var(--line); }
+}
+@media (max-width: 560px) {
+  .list li { grid-template-columns: 14px minmax(0, 1fr) auto; }
+  .list .res { grid-column: 2 / 4; text-align: left; }
+}
 </style>
 </head>
 <body>
 <div class="layout">
   <aside class="side">
     <header class="head">
-      <div class="brand"><h1 data-i="brand"><span class="acc">BML</span> Traffic</h1><span class="by" data-i="by">by dmitry.mdd</span></div>
+      <div class="brand">
+        <h1 data-i="brand"><span class="acc">BML</span> Traffic</h1>
+        <span class="by" data-i="by">by dmitry.mdd</span>
+      </div>
       <div class="bar">
         <button id="play" class="acc-y grow" type="button" data-i="play">Play</button>
         <button id="step" type="button" data-i="step" data-i-title="stepTip" title="Hold to fast-forward">Step</button>
         <button id="help" type="button" aria-expanded="false" data-i-aria="help" aria-label="About">?</button>
-        <div class="seg" role="group" aria-label="Language">
+        <div class="seg" role="group" data-i-aria="language" aria-label="Language">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="ru" aria-pressed="false">RU</button>
         </div>
       </div>
       <div class="gauges">
-        <div class="gauge"><div class="lab" data-i="tick">Tick</div><div class="big" id="tick">0</div></div>
-        <div class="gauge"><div class="lab" data-i="moving">Moving</div><div class="big" id="movingPct">—</div><div class="meter" aria-hidden="true"><i id="movingBar"></i></div></div>
+        <div class="gauge">
+          <div class="lab" data-i="tick">Tick</div>
+          <div class="big" id="tick">0</div>
+        </div>
+        <div class="gauge">
+          <div class="lab" data-i="moving">Moving</div>
+          <div class="big" id="movingPct">—</div>
+          <div class="meter" aria-hidden="true"><i id="movingBar"></i></div>
+        </div>
       </div>
       <div class="state" id="state" data-s="idle" role="status"><span id="stateText">Ready</span></div>
     </header>
 
-    <div class="ctrl" aria-label="Settings">
+    <div class="ctrl" data-i-aria="settings" aria-label="Settings">
       <div class="group">
         <div class="gt" data-i="gGrid">Grid</div>
         <label class="field-l"><span class="lab" data-i="size">Size</span>
-          <select id="size">
+          <select id="size" autocomplete="off">
             <optgroup data-i-label="pow2" label="Powers of two">
               <option value="32">32 x 32</option>
               <option value="64">64 x 64</option>
@@ -287,17 +328,20 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
           </select>
         </label>
         <div class="field-l"><label class="lab" for="seed" data-i="seed">Seed</label>
-          <div class="row"><input id="seed" class="grow" type="text" value="1992" spellcheck="false" autocomplete="off"><button id="newSeed" type="button" data-i="newSeed">New</button></div>
+          <div class="row">
+            <input id="seed" class="grow" type="text" value="1992" spellcheck="false" autocomplete="off">
+            <button id="newSeed" type="button" data-i="newSeed">New</button>
+          </div>
         </div>
         <label class="field-l"><span class="lab"><span data-i="zoom">Zoom</span><output id="zoomOut">70%</output></span>
-          <input id="zoom" type="range" min="25" max="100" step="5" value="70">
+          <input id="zoom" type="range" min="25" max="100" step="5" value="70" autocomplete="off">
         </label>
       </div>
 
       <div class="group">
         <div class="gt" data-i="gLayout">Layout</div>
         <label class="field-l"><span class="lab" data-i="pattern">Pattern</span>
-          <select id="template">
+          <select id="template" autocomplete="off">
             <option value="random" data-i="tpl_random">Random</option>
             <option value="perfect" data-i="tpl_perfect">Perfect flow</option>
             <option value="defect" data-i="tpl_defect">Perfect + extra</option>
@@ -312,7 +356,7 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
         </label>
         <p class="hint" id="tplHint" hidden></p>
         <label class="field-l" id="densityField"><span class="lab"><span data-i="density">Density</span><output id="densityOut">30.0%</output></span>
-          <input id="density" type="range" min="0" max="100" step="0.1" value="30">
+          <input id="density" type="range" min="0" max="100" step="0.1" value="30" autocomplete="off">
         </label>
         <div class="chips" id="presets">
           <button type="button" data-d="30">30%</button>
@@ -320,13 +364,13 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
           <button type="button" data-d="38">38%</button>
         </div>
         <label class="field-l" id="shareField"><span class="lab"><span data-i="share">Car ratio</span><output id="shareOut">50 : 50</output></span>
-          <input id="share" type="range" min="0" max="100" step="1" value="50">
+          <input id="share" type="range" min="0" max="100" step="1" value="50" autocomplete="off">
         </label>
         <label class="field-l" id="extraField"><span class="lab" data-i="extra">Extra cars</span>
-          <input id="extra" type="number" min="1" max="100000" step="1" value="1" inputmode="numeric">
+          <input id="extra" type="number" min="1" max="100000" step="1" value="1" inputmode="numeric" autocomplete="off">
         </label>
         <label class="field-l" id="cellField"><span class="lab"><span data-i="cellSize">Cell size</span><output id="cellOut">8</output></span>
-          <input id="cell" type="range" min="1" max="32" step="1" value="8">
+          <input id="cell" type="range" min="1" max="32" step="1" value="8" autocomplete="off">
         </label>
         <button id="reset" type="button" data-i="reset">Reset</button>
       </div>
@@ -334,7 +378,7 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
       <div class="group">
         <div class="gt" data-i="gRun">Run</div>
         <label class="field-l"><span class="lab" data-i="speed">Speed</span>
-          <select id="speed">
+          <select id="speed" autocomplete="off">
             <option value="0.1" data-i="sp0">1 tick / 10 frames</option>
             <option value="0.34" data-i="sp1">1 tick / 3 frames</option>
             <option value="1" data-i="sp2" selected>1 tick / frame</option>
@@ -344,7 +388,7 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
             <option value="turbo" data-i="sp6">Turbo</option>
           </select>
         </label>
-        <label class="check"><input id="autostop" type="checkbox" checked><span data-i="autostop">Pause when settled</span></label>
+        <label class="check"><input id="autostop" type="checkbox" checked autocomplete="off"><span data-i="autostop">Pause when settled</span></label>
       </div>
 
       <div class="group">
@@ -352,22 +396,26 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
         <div class="tiles" id="tools">
           <div class="tile">
             <button type="button" class="pick" data-tool="1" aria-pressed="false"><span class="sw" id="swY"></span><span class="tl"><i class="arr arr-r"></i> <span data-i="cY">Right</span></span></button>
-            <label class="edit" data-i-title="editColor" title="Change color"><input id="cY" type="color" value="#e18147" data-i-aria="editColor" aria-label="Change color"><i class="pen"></i></label>
+            <label class="edit" data-i-title="editColor" title="Change color"><input id="cY" type="color" value="#e18147" data-i-aria="editColor" aria-label="Change color" autocomplete="off"><i class="pen"></i></label>
           </div>
           <div class="tile">
             <button type="button" class="pick" data-tool="2" aria-pressed="false"><span class="sw" id="swB"></span><span class="tl"><i class="arr down arr-d"></i> <span data-i="cB">Down</span></span></button>
-            <label class="edit" data-i-title="editColor" title="Change color"><input id="cB" type="color" value="#4aa8c9" data-i-aria="editColor" aria-label="Change color"><i class="pen"></i></label>
+            <label class="edit" data-i-title="editColor" title="Change color"><input id="cB" type="color" value="#4aa8c9" data-i-aria="editColor" aria-label="Change color" autocomplete="off"><i class="pen"></i></label>
           </div>
           <div class="tile">
             <button type="button" class="pick" data-tool="0" aria-pressed="false"><span class="sw" id="swF"></span><span class="tl" data-i="cBg">Erase</span></button>
-            <label class="edit" data-i-title="editField" title="Change field color"><input id="cBg" type="color" value="#101214" data-i-aria="editField" aria-label="Change field color"><i class="pen"></i></label>
+            <label class="edit" data-i-title="editField" title="Change field color"><input id="cBg" type="color" value="#101214" data-i-aria="editField" aria-label="Change field color" autocomplete="off"><i class="pen"></i></label>
           </div>
         </div>
+        <button id="resetColors" type="button" data-i="resetColors">Reset colors</button>
         <label class="field-l"><span class="lab"><span data-i="brush">Brush</span><output id="brushOut">1</output></span>
-          <input id="brush" type="range" min="0" max="8" step="1" value="0">
+          <input id="brush" type="range" min="0" max="8" step="1" value="0" autocomplete="off">
         </label>
-        <div class="warn" id="warn" hidden><p id="warnText"></p><button id="fixColors" type="button" data-i="fix">Fix</button></div>
-        <label class="check"><input id="stuck" type="checkbox" checked><span data-i="dim">Dim stuck cars</span></label>
+        <div class="warn" id="warn" hidden>
+          <p id="warnText"></p>
+          <button id="fixColors" type="button" data-i="fix">Fix</button>
+        </div>
+        <label class="check"><input id="stuck" type="checkbox" checked autocomplete="off"><span data-i="dim">Dim stuck cars</span></label>
       </div>
 
       <div class="group">
@@ -378,7 +426,7 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
         </div>
         <div class="row">
           <label class="field-l grow"><span class="lab" data-i="every">Frame every</span>
-            <select id="gifEvery">
+            <select id="gifEvery" autocomplete="off">
               <option value="1" data-i="ev1">1 tick</option>
               <option value="2" data-i="ev2" selected>2 ticks</option>
               <option value="4" data-i="ev4">4 ticks</option>
@@ -387,7 +435,7 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
             </select>
           </label>
           <label class="field-l grow"><span class="lab" data-i="fps">Playback</span>
-            <select id="gifFps">
+            <select id="gifFps" autocomplete="off">
               <option value="2" data-i="fps50">50 fps</option>
               <option value="4" data-i="fps25" selected>25 fps</option>
               <option value="8" data-i="fps12">12 fps</option>
@@ -396,7 +444,7 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
         </div>
         <p class="hint" id="gifStatus"></p>
         <div class="gif-out" id="gifOut" hidden>
-          <img id="gifImg" alt="Recorded animation">
+          <img id="gifImg" data-i-alt="gifAlt" alt="Recorded animation">
           <button id="gifSave" type="button" data-i="gifSave">Save GIF</button>
         </div>
       </div>
@@ -404,27 +452,47 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
   </aside>
 
   <main class="stage">
-    <div class="fieldbox" id="fieldbox"><div class="frame"><canvas id="grid" width="256" height="256" aria-label="Simulation grid"></canvas></div></div>
+    <div class="fieldbox" id="fieldbox">
+      <div class="frame"><canvas id="grid" width="256" height="256" data-i-aria="gridLabel" aria-label="Simulation grid"></canvas></div>
+    </div>
 
     <div class="stats">
-      <div class="stat"><div class="lab" data-i="sCars">Cars</div><div class="big" id="carCount">0</div></div>
-      <div class="stat"><div class="lab" data-i="sDensity">Density</div><div class="big" id="realDensity">0%</div></div>
-      <div class="stat"><div class="lab" data-i="sSplit">By direction</div><div class="two"><span><i class="arr arr-r"></i> <span id="nY">0</span></span><span><i class="arr down arr-d"></i> <span id="nB">0</span></span></div></div>
-      <div class="stat"><div class="lab" data-i="sAvg">Avg speed</div><div class="big" id="avgV">—</div></div>
+      <div class="stat">
+        <div class="lab" data-i="sCars">Cars</div>
+        <div class="big" id="carCount">0</div>
+      </div>
+      <div class="stat">
+        <div class="lab" data-i="sDensity">Density</div>
+        <div class="big" id="realDensity">0%</div>
+      </div>
+      <div class="stat">
+        <div class="lab" data-i="sSplit">By direction</div>
+        <div class="two">
+          <span><i class="arr arr-r"></i> <span id="nY">0</span></span>
+          <span><i class="arr down arr-d"></i> <span id="nB">0</span></span>
+        </div>
+      </div>
+      <div class="stat">
+        <div class="lab" data-i="sAvg">Avg speed</div>
+        <div class="big" id="avgV">—</div>
+      </div>
     </div>
 
     <section class="panel">
       <div class="panel-head">
         <h2 data-i="chartTitle">Moving cars per tick</h2>
         <div class="row">
-          <div class="seg" role="group" aria-label="Time scale">
+          <div class="seg" role="group" data-i-aria="timeScale" aria-label="Time scale">
             <button type="button" id="scaleLin" aria-pressed="false" data-i="lin">Linear</button>
             <button type="button" id="scaleLog" aria-pressed="true" data-i="log">Log</button>
           </div>
           <button type="button" id="clearHist" data-i="clear">Clear</button>
         </div>
       </div>
-      <div class="chart-box"><canvas class="chart" id="chart"></canvas><p class="chart-empty" id="chartEmpty" data-i="chartEmpty" hidden>Press Play. Past runs stay here for comparison.</p></div>
+      <div class="chart-box">
+        <canvas class="chart" id="chart"></canvas>
+        <p class="chart-empty" id="chartEmpty" data-i="chartEmpty" hidden>Press Play. Past runs stay here for comparison.</p>
+      </div>
       <ul class="list" id="runList"></ul>
     </section>
 
@@ -440,35 +508,80 @@ kbd { font: inherit; padding: 0 4px; border: 3px solid var(--line); }
       <p class="hint" data-i="phaseHint">Final share of moving cars for many random starts, by density.</p>
       <div class="pform">
         <label class="field-l"><span class="lab" data-i="pN">Grid</span>
-          <select id="pN"><option value="32">32</option><option value="64">64</option><option value="128">128</option><option value="256" selected>256</option><option value="512">512</option></select>
+          <select id="pN" autocomplete="off">
+            <option value="32">32</option>
+            <option value="64">64</option>
+            <option value="128">128</option>
+            <option value="256" selected>256</option>
+            <option value="512">512</option>
+          </select>
         </label>
-        <label class="field-l"><span class="lab" data-i="pFrom">From %</span><input id="pFrom" type="number" min="1" max="99" step="0.5" value="20" inputmode="decimal"></label>
-        <label class="field-l"><span class="lab" data-i="pTo">To %</span><input id="pTo" type="number" min="1" max="99" step="0.5" value="45" inputmode="decimal"></label>
-        <label class="field-l"><span class="lab" data-i="pStep">Step %</span><input id="pStep" type="number" min="0.1" max="20" step="0.1" value="1" inputmode="decimal"></label>
-        <label class="field-l"><span class="lab" data-i="pRuns">Starts</span><input id="pRuns" type="number" min="1" max="50" step="1" value="3" inputmode="numeric"></label>
-        <label class="field-l"><span class="lab" data-i="pMax">Max ticks</span><input id="pMax" type="number" min="500" max="2000000" step="500" value="10000" inputmode="numeric"></label>
+        <label class="field-l"><span class="lab" data-i="pFrom">From %</span><input id="pFrom" type="number" min="1" max="99" step="0.5" value="20" inputmode="decimal" autocomplete="off"></label>
+        <label class="field-l"><span class="lab" data-i="pTo">To %</span><input id="pTo" type="number" min="1" max="99" step="0.5" value="45" inputmode="decimal" autocomplete="off"></label>
+        <label class="field-l"><span class="lab" data-i="pStep">Step %</span><input id="pStep" type="number" min="0.1" max="20" step="0.1" value="1" inputmode="decimal" autocomplete="off"></label>
+        <label class="field-l"><span class="lab" data-i="pRuns">Starts</span><input id="pRuns" type="number" min="1" max="50" step="1" value="3" inputmode="numeric" autocomplete="off"></label>
+        <label class="field-l"><span class="lab" data-i="pMax">Max ticks</span><input id="pMax" type="number" min="500" max="2000000" step="500" value="10000" inputmode="numeric" autocomplete="off"></label>
       </div>
       <div class="progress" aria-hidden="true"><i id="pBar"></i></div>
       <p class="hint" id="pStatus"></p>
-      <div class="chart-box"><canvas class="chart" id="phase"></canvas><p class="chart-empty" id="phaseEmpty" data-i="phaseEmpty">Run a sweep to find the tipping point.</p></div>
+      <div class="chart-box">
+        <canvas class="chart" id="phase"></canvas>
+        <p class="chart-empty" id="phaseEmpty" data-i="phaseEmpty">Run a sweep to find the tipping point.</p>
+      </div>
       <ul class="list" id="sweepList"></ul>
     </section>
 
     <section class="panel about" id="about" hidden>
-      <div><h3 data-i="aModelH">Model</h3><p data-i="aModel"></p><p data-i="aModel2"></p></div>
-      <div><h3 data-i="aTermsH">Terms</h3><p data-i="aTerms"></p><p data-i="aTerms2"></p></div>
-      <div><h3 data-i="aProofH">What's proven</h3><p data-i="aProof"></p><p data-i="aProof2"></p></div>
-      <div><h3 data-i="aDetH">How outcomes are detected</h3><p data-i="aDet"></p><p data-i="aDet2"></p></div>
-      <div><h3 data-i="aPatH">Patterns</h3><p data-i="aPat"></p><p data-i="aPat2"></p></div>
-      <div><h3 data-i="aKeysH">Controls</h3><p><kbd>Space</kbd> <span data-i="kPlay">play</span></p><p><kbd>→</kbd> <span data-i="kStep">step</span></p><p><kbd>R</kbd> <span data-i="kReset">reset</span> | <kbd>Esc</kbd> <span data-i="kEsc">stop painting</span></p><p><a href="https://en.wikipedia.org/wiki/Biham%E2%80%93Middleton%E2%80%93Levine_traffic_model" target="_blank" rel="noopener">Wikipedia</a></p></div>
+      <div>
+        <h3 data-i="aModelH">Model</h3>
+        <p data-i="aModel"></p>
+        <p data-i="aModel2"></p>
+      </div>
+      <div>
+        <h3 data-i="aTermsH">Terms</h3>
+        <p data-i="aTerms"></p>
+        <p data-i="aTerms2"></p>
+      </div>
+      <div>
+        <h3 data-i="aProofH">What's proven</h3>
+        <p data-i="aProof"></p>
+        <p data-i="aProof2"></p>
+      </div>
+      <div>
+        <h3 data-i="aDetH">How outcomes are detected</h3>
+        <p data-i="aDet"></p>
+        <p data-i="aDet2"></p>
+      </div>
+      <div>
+        <h3 data-i="aPatH">Patterns</h3>
+        <p data-i="aPat"></p>
+        <p data-i="aPat2"></p>
+      </div>
+      <div>
+        <h3 data-i="aKeysH">Controls</h3>
+        <p><kbd>Space</kbd> <span data-i="kPlay">play</span></p>
+        <p><kbd>→</kbd> <span data-i="kStep">step</span></p>
+        <p><kbd>R</kbd> <span data-i="kReset">reset</span> | <kbd>Esc</kbd> <span data-i="kEsc">stop painting</span></p>
+        <p><a href="https://en.wikipedia.org/wiki/Biham%E2%80%93Middleton%E2%80%93Levine_traffic_model" target="_blank" rel="noopener">Wikipedia</a></p>
+      </div>
     </section>
   </main>
 </div>
+<footer class="foot">
+  <p data-i-links="foot1">© 2026 Dmitry Mysyakov · MIT License · Source on GitHub</p>
+  <p data-i-links="foot2">Model: Biham, Middleton &amp; Levine (1992) · Font: Pixar One © Vasily Shishkin · Built with Claude Code</p>
+</footer>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
 <script>
-"use strict";
-/* ===================== CORE (shared with the sweep worker) ===================== */
+'use strict';
+
+const REPO_URL = 'https://github.com/dmitrymdd/bml-traffic';
+
+
+// ── CORE (worker-safe) ──────────────────────────────────────
+// The sweep worker is built from these functions' source (WORKER_SRC): no globals, DOM or outer closures.
+// Cells: 0 empty, 1 yellow (moves right), 2 blue (moves down); +4 = blocked on its last half-step (display only).
 /*CORE-START*/
 function mulberry32(a) {
   return function () {
@@ -478,18 +591,23 @@ function mulberry32(a) {
     return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
   };
 }
+
+// FNV-1a of the string seeds the generator
 function seedFrom(str) {
   let h = 2166136261 >>> 0;
   str = String(str);
   for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
   return mulberry32(h >>> 0);
 }
-// Zobrist-style key for "car of type t at cell i": hashed on the fly instead of a table.
+
+// Zobrist-style key for "car of type t at cell i" (k = 2i + t - 1), hashed on the fly instead of a table
 function zh(k) {
   k = Math.imul(k ^ (k >>> 16), 0x7feb352d);
   k = Math.imul(k ^ (k >>> 15), 0x846ca68b);
   return k ^ (k >>> 16);
 }
+
+// two 32-bit hashes; b salts each key with 0x2545F491
 function fullHash(g, H) {
   let a = 0, b = 0;
   for (let i = 0; i < g.length; i++) {
@@ -498,21 +616,10 @@ function fullHash(g, H) {
   }
   H.a = a; H.b = b;
 }
-// Cell: 0 empty, 1 yellow, 2 blue; +4 = "was blocked on its last half-step" (display only).
-function fillRandom(g, N, density, yShare, rand) {
-  const M = N * N;
-  g.fill(0);
-  const cars = Math.min(M, Math.round(density * M));
-  const ny = Math.round(cars * yShare);
-  const idx = new Uint32Array(M);
-  for (let i = 0; i < M; i++) idx[i] = i;
-  for (let i = 0; i < cars; i++) {
-    const j = i + Math.floor(rand() * (M - i));
-    const t = idx[i]; idx[i] = idx[j]; idx[j] = t;
-    g[idx[i]] = i < ny ? 1 : 2;
-  }
-  return cars;
-}
+
+// All cars of one colour move at once: scanning forward and skipping the cell just entered needs no copy,
+// and `first` is the line's start before the half-step, for the car that wraps around.
+// The hash stays in locals ha/hb: property writes in this loop are ~40x slower.
 function stepYellow(g, N, H) {
   let moved = 0, ha = H ? H.a : 0, hb = H ? H.b : 0;
   const track = !!H;
@@ -537,6 +644,7 @@ function stepYellow(g, N, H) {
   if (track) { H.a = ha; H.b = hb; }
   return moved;
 }
+
 function stepBlue(g, N, H) {
   let moved = 0, ha = H ? H.a : 0, hb = H ? H.b : 0;
   const track = !!H;
@@ -561,6 +669,7 @@ function stepBlue(g, N, H) {
   if (track) { H.a = ha; H.b = hb; }
   return moved;
 }
+
 // Brent's cycle detection: one stored checkpoint, moved at powers of two. Hash match is confirmed cell by cell.
 function makeBrent(M) {
   const snap = new Uint8Array(M);
@@ -580,6 +689,7 @@ function makeBrent(M) {
     }
   };
 }
+
 // One sweep = many independent random runs. run(ms) works in time slices so it fits a worker or the main thread.
 function createSweep(job) {
   const N = job.N, M = N * N, dens = job.dens, runs = job.runs, maxTicks = job.maxTicks;
@@ -629,25 +739,65 @@ function createSweep(job) {
   };
   return S;
 }
+
+// partial Fisher-Yates over all cells; returns the number of cars placed
+function fillRandom(g, N, density, yShare, rand) {
+  const M = N * N;
+  g.fill(0);
+  const cars = Math.min(M, Math.round(density * M));
+  const ny = Math.round(cars * yShare);
+  const idx = new Uint32Array(M);
+  for (let i = 0; i < M; i++) idx[i] = i;
+  for (let i = 0; i < cars; i++) {
+    const j = i + Math.floor(rand() * (M - i));
+    const t = idx[i]; idx[i] = idx[j]; idx[j] = t;
+    g[idx[i]] = i < ny ? 1 : 2;
+  }
+  return cars;
+}
+
 function fillPerfect(g, N) {
-  // Diagonals x+y cycle blue, yellow, empty. N mod 3 leftover diagonals stay empty.
+  // diagonals x+y cycle blue, yellow, empty; the N mod 3 leftover diagonals stay empty
   g.fill(0);
   const seq = new Uint8Array(N), k = Math.floor(N / 3);
   for (let j = 0; j < k; j++) { seq[3 * j] = 2; seq[3 * j + 1] = 1; }
   for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) g[y * N + x] = seq[(x + y) % N];
 }
+
+// perfect flow plus up to `extra` cars on random empty cells; returns how many were placed
+function fillDefect(g, N, extra, share, rand) {
+  fillPerfect(g, N);
+  const M = N * N, empties = [];
+  for (let i = 0; i < M; i++) if (g[i] === 0) empties.push(i);
+  const n = Math.min(empties.length, extra);
+  const ny = Math.round(n * share);
+  for (let i = 0; i < n; i++) {
+    const j = i + Math.floor(rand() * (empties.length - i)), tmp = empties[i]; empties[i] = empties[j]; empties[j] = tmp;
+    g[empties[i]] = i < ny ? 1 : 2;
+  }
+  return n;
+}
+
 function fillWorst(g, N) {
-  // Staircase: each yellow faces a blue on its right, each blue faces a yellow below; closes through the edge.
+  // staircase: each yellow faces a blue on its right, each blue faces a yellow below; closes through the edge
   g.fill(0);
   for (let i = 0; i < N; i++) { g[i * N + i] = 1; g[i * N + ((i + 1) % N)] = 2; }
 }
-/*CORE-END*/
 
+function fillSeedJam(g, N, density, share, rand) {
+  fillRandom(g, N, density, share, rand);
+  const s = Math.max(4, N >> 3), o = (N - s) >> 1;
+  for (let y = o; y < o + s; y++) for (let x = o; x < o + s; x++) g[y * N + x] = rand() < share ? 1 : 2;
+}
+
+// one centred square holding density * N^2 cars
 function fillBlock(g, N, density, share, rand) {
   g.fill(0);
   const s = Math.min(N, Math.max(1, Math.round(Math.sqrt(density * N * N)))), o = (N - s) >> 1;
   for (let y = o; y < o + s; y++) for (let x = o; x < o + s; x++) g[y * N + x] = rand() < share ? 1 : 2;
 }
+
+// a square of each colour, centred on (N/4, N/4) and (3N/4, 3N/4)
 function fillClusters(g, N, density, rand) {
   g.fill(0);
   const s = Math.min(N >> 1, Math.max(1, Math.round(Math.sqrt(density * N * N / 2)))), a = (N >> 2) - (s >> 1), b = a + (N >> 1);
@@ -656,12 +806,16 @@ function fillClusters(g, N, density, rand) {
     g[((b + y + N) % N) * N + (b + x + N) % N] = 2;
   }
 }
+
+// band width w solves 1 - (1 - w/N)^2 = density; blue wins the shared square
 function fillCross(g, N, density) {
   g.fill(0);
   const w = Math.min(N, Math.max(1, Math.round(N * (1 - Math.sqrt(1 - density))))), o = (N - w) >> 1;
   for (let y = o; y < o + w; y++) for (let x = 0; x < N; x++) g[y * N + x] = 2;
   for (let x = o; x < o + w; x++) for (let y = 0; y < N; y++) if (g[y * N + x] === 0) g[y * N + x] = 1;
 }
+
+// k x k squares; even block rows are yellow, odd ones blue
 function fillChecker(g, N, k) {
   g.fill(0);
   for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
@@ -669,11 +823,15 @@ function fillChecker(g, N, k) {
     if (((bx + by) & 1) === 0) g[y * N + x] = (by & 1) ? 2 : 1;
   }
 }
+/*CORE-END*/
 
-/* ===================== GIF encoder ===================== */
+
+// ── GIF encoder ─────────────────────────────────────────────
+// variable-width LZW as GIF expects, packed into sub-blocks of at most 255 bytes
 function lzwEncode(idx, minCode) {
   const clear = 1 << minCode, eoi = clear + 1;
   let size = minCode + 1, next = eoi + 1;
+  // dict[(prefix << minCode) | symbol] = code, or -1
   const dict = new Int16Array(4096 << minCode).fill(-1);
   let out = new Uint8Array(Math.max(4096, idx.length >> 2)), op = 0, cur = 0, shift = 0;
   const put = (b) => { if (op >= out.length) { const n = new Uint8Array(out.length * 2); n.set(out); out = n; } out[op++] = b; };
@@ -696,12 +854,16 @@ function lzwEncode(idx, minCode) {
   res[w++] = 0;
   return res;
 }
+
+// GIF89a header, 8-colour global palette and a NETSCAPE2.0 block that loops forever
 function gifHeader(W, H, pal) {
   const b = [71, 73, 70, 56, 57, 97, W & 255, W >> 8, H & 255, H >> 8, 0xA2, 0, 0];
   for (let i = 0; i < 8; i++) { const c = pal[i] || [0, 0, 0]; b.push(c[0], c[1], c[2]); }
   b.push(0x21, 0xFF, 0x0B, 78, 69, 84, 83, 67, 65, 80, 69, 50, 46, 48, 0x03, 0x01, 0, 0, 0x00);
   return new Uint8Array(b);
 }
+
+// graphic control block (delay in 1/100 s) and one full-size image
 function gifFrame(indices, W, H, delay) {
   const head = new Uint8Array([0x21, 0xF9, 0x04, 0x04, delay & 255, delay >> 8, 0, 0, 0x2C, 0, 0, 0, 0, W & 255, W >> 8, H & 255, H >> 8, 0]);
   const data = lzwEncode(indices, 3);
@@ -710,101 +872,144 @@ function gifFrame(indices, W, H, delay) {
   return f;
 }
 
-/* ===================== i18n ===================== */
+
+// ── i18n ────────────────────────────────────────────────────
 const I18N = {
   en: {
-    brand: '<span class="acc">BML</span> Traffic', by: 'by dmitry.mdd', gCars: 'Cars', carsHint: 'Click a color to paint with it, click again to stop.', editColor: 'Change color', editField: 'Change field color', hDrawn: 'Drawn | {d} | {n} cars', drawnTag: 'drawing', drawnName: 'Drawing', kEsc: 'stop painting', aTermsH: 'Terms', aPatH: 'Patterns', aKeysH: 'Controls', play: 'Play', pause: 'Pause', step: 'Step', stepTip: 'Hold to fast-forward', help: 'About the model',
-    tick: 'Tick', moving: 'Moving', gGrid: 'Grid', size: 'Size', pow2: 'Powers of two', mult3: 'Multiples of 3, exact 2/3',
-    seed: 'Seed', newSeed: 'New', gLayout: 'Layout', pattern: 'Pattern',
-    tpl_random: 'Random', tpl_perfect: 'Perfect flow', tpl_defect: 'Perfect + extra', tpl_worst: 'Staircase', tpl_seedjam: 'Jam seed', tpl_block: 'Packed block', tpl_clusters: 'Two crowds', tpl_cross: 'Crossroads', tpl_checker: 'Checkerboard', tpl_empty: 'Empty',
-    density: 'Density', share: 'Car ratio', extra: 'Extra cars', cellSize: 'Cell size', zoom: 'Zoom', reset: 'Reset', gRun: 'Run', speed: 'Speed',
-    sp0: '1 tick / 10 frames', sp1: '1 tick / 3 frames', sp2: '1 tick / frame', sp3: '4 ticks / frame', sp4: '16 ticks / frame', sp5: '64 ticks / frame', sp6: 'Turbo',
-    autostop: 'Pause when settled', gDraw: 'Draw', toolOff: 'Off', toolY: 'Right', toolB: 'Down', toolE: 'Erase', brush: 'Brush',
-    gColors: 'Colors', cY: 'Right', cB: 'Down', cBg: 'Erase', fix: 'Fix', dim: 'Dim stuck cars',
-    warnY: 'Right-moving cars blend into the field.', warnB: 'Down-moving cars blend into the field.', warnYB: 'The two directions look alike.',
-    gExport: 'Export', png: 'Save PNG', rec: 'Record GIF', recStop: 'Stop', every: 'Frame every', fps: 'Playback',
-    ev1: '1 tick', ev2: '2 ticks', ev4: '4 ticks', ev8: '8 ticks', ev32: '32 ticks', fps50: '50 fps', fps25: '25 fps', fps12: '12 fps',
+    brand: '<span class="acc">BML</span> Traffic', by: 'by dmitry.mdd', play: 'Play', pause: 'Pause', step: 'Step',
+    stepTip: 'Hold to fast-forward', help: 'About the model', language: 'Language', tick: 'Tick', moving: 'Moving', settings: 'Settings',
+    gGrid: 'Grid', size: 'Size', pow2: 'Powers of two', mult3: 'Multiples of 3, exact 2/3', seed: 'Seed', newSeed: 'New', zoom: 'Zoom',
+    gLayout: 'Layout', pattern: 'Pattern', tpl_random: 'Random', tpl_perfect: 'Perfect flow', tpl_defect: 'Perfect + extra',
+    tpl_worst: 'Staircase', tpl_seedjam: 'Jam seed', tpl_block: 'Packed block', tpl_clusters: 'Two crowds', tpl_cross: 'Crossroads',
+    tpl_checker: 'Checkerboard', tpl_empty: 'Empty',
+    density: 'Density', share: 'Car ratio', extra: 'Extra cars', cellSize: 'Cell size', reset: 'Reset',
+    hPerfect: '{d} | every car moves, every tick', hDefect: '{d} + {n} extra. Will it heal?', hWorst: '{n} cars | {d} | nothing ever moves',
+    hSeedjam: 'Random + a solid block in the center', hBlock: 'One solid square of cars in the middle, empty elsewhere',
+    hClusters: 'Right-movers packed in one corner, down-movers in the opposite one',
+    hCross: 'A full band of right-movers crossing a full band of down-movers',
+    hChecker: 'Alternating squares of cars and empty space, 50% density', hEmpty: 'Pick a car under Cars and paint on the grid',
+    hDrawn: 'Drawn | {d} | {n} cars',
+    gRun: 'Run', speed: 'Speed', sp0: '1 tick / 10 frames', sp1: '1 tick / 3 frames', sp2: '1 tick / frame', sp3: '4 ticks / frame',
+    sp4: '16 ticks / frame', sp5: '64 ticks / frame', sp6: 'Turbo', autostop: 'Pause when settled',
+    gCars: 'Cars', cY: 'Right', cB: 'Down', cBg: 'Erase', editColor: 'Change color', editField: 'Change field color',
+    resetColors: 'Reset colors', brush: 'Brush', fix: 'Fix', dim: 'Dim stuck cars', warnY: 'Right-moving cars blend into the field.',
+    warnB: 'Down-moving cars blend into the field.', warnYB: 'The two directions look alike.',
+    gExport: 'Export', png: 'Save PNG', rec: 'Record GIF', recStop: 'Stop', every: 'Frame every', fps: 'Playback', ev1: '1 tick',
+    ev2: '2 ticks', ev4: '4 ticks', ev8: '8 ticks', ev32: '32 ticks', fps50: '50 fps', fps25: '25 fps', fps12: '12 fps',
     gifIdle: '', gifRec: 'Recording | {n} frames | {mb} MB', gifDone: 'Done | {n} frames | {mb} MB', gifSave: 'Save GIF',
-    sCars: 'Cars', sDensity: 'Density', sSplit: 'By direction', sAvg: 'Avg speed',
-    chartTitle: 'Moving cars per tick', lin: 'Linear', log: 'Log', clear: 'Clear', chartEmpty: 'Press Play. Past runs stay here for comparison.',
-    now: 'Now', hide: 'Hide', show: 'Show',
-    phaseTitle: 'Phase diagram', phaseRun: 'Run sweep', phaseStop: 'Stop', phaseHint: 'Final share of moving cars for many random starts, by density.',
+    gifAlt: 'Recorded animation',
+    gridLabel: 'Simulation grid', sCars: 'Cars', sDensity: 'Density', sSplit: 'By direction', sAvg: 'Avg speed',
+    chartTitle: 'Moving cars per tick', timeScale: 'Time scale', lin: 'Linear', log: 'Log', clear: 'Clear',
+    chartEmpty: 'Press Play. Past runs stay here for comparison.', now: 'Now', hide: 'Hide', show: 'Show', drawnTag: 'drawing',
+    drawnName: 'Drawing',
+    stReady: 'Ready', stEmpty: 'Empty grid', stRun: 'Running', stPause: 'Paused', stPending: 'All moving | {s}/{n}',
+    stFree: 'Free flow | tick {t}', stJam: 'Gridlock | last move {t}', stJam0: 'Gridlock from the start',
+    stLoop: 'Loop | period {p} | {v} moving',
+    oFree: 'free from {t}', oJam: 'jam, last move {t}', oJam0: 'jam from start', oLoop: 'loop, period {p}', oRun: '{t} ticks', oNone: '—',
+    phaseTitle: 'Phase diagram', phaseRun: 'Run sweep', phaseStop: 'Stop',
+    phaseHint: 'Final share of moving cars for many random starts, by density.', phaseEmpty: 'Run a sweep to find the tipping point.',
     pN: 'Grid', pFrom: 'From %', pTo: 'To %', pStep: 'Step %', pRuns: 'Starts', pMax: 'Max ticks',
     pIdle: '', pProg: 'Run {done} of {total} | {d} | {s} s', pDone: 'Done in {s} s.', pTr: ' Speed drops below 50% near {d}.',
     pStopped: 'Stopped. Finished points stay on the chart.', pBad: 'Check the range: From < To, both between 0 and 100, step above 0.',
-    pTooMany: 'Too many runs ({n}). Raise the step or lower the starts.', pMain: ' | main thread', phaseEmpty: 'Run a sweep to find the tipping point.',
+    pTooMany: 'Too many runs ({n}). Raise the step or lower the starts.', pMain: ' | main thread',
     sweepRes: '{free} free | {loop} loop | {mixed} mixed | {jam} jam', sweepTr: '50% at {d} | ', starts: '{n} per point', upTo: 'max {t}',
-    oFree: 'free from {t}', oJam: 'jam, last move {t}', oJam0: 'jam from start', oLoop: 'loop, period {p}', oRun: '{t} ticks', oNone: '—',
-    stReady: 'Ready', stEmpty: 'Empty grid', stRun: 'Running', stPause: 'Paused', stPending: 'All moving | {s}/{n}',
-    stFree: 'Free flow | tick {t}', stJam: 'Gridlock | last move {t}', stJam0: 'Gridlock from the start', stLoop: 'Loop | period {p} | {v} moving',
-    hPerfect: '{d} | every car moves, every tick', hDefect: '{d} + {n} extra. Will it heal?', hWorst: '{n} cars | {d} | nothing ever moves',
-    hSeedjam: 'Random + a solid block in the center', hBlock: 'One solid square of cars in the middle, empty elsewhere', hClusters: 'Right-movers packed in one corner, down-movers in the opposite one', hCross: 'A full band of right-movers crossing a full band of down-movers', hChecker: 'Alternating squares of cars and empty space, 50% density', hEmpty: 'Pick a car under Cars and paint on the grid',
-    tSaved: 'Saved {f}', tDeclined: 'Save cancelled', tBusy: 'A save dialog is already open', tFail: 'Could not save ({c})', tSweepFirst: 'Run a sweep first',
-    aModelH: 'Model', aProofH: 'What\u2019s proven', aDetH: 'How outcomes are detected',
+    tSaved: 'Saved {f}', tDeclined: 'Save cancelled', tBusy: 'A save dialog is already open', tFail: 'Could not save ({c})',
+    tSweepFirst: 'Run a sweep first',
+    aModelH: 'Model',
     aModel: 'Biham, Middleton and Levine, 1992. The grid is N x N cells and its edges wrap around: a car leaving on the right comes back on the left, and one leaving at the bottom comes back at the top. Each cell holds at most one car.',
     aModel2: 'Right-moving cars only ever go right, down-moving cars only ever go down. One tick has two half-steps: first every right-moving car tries to step one cell at once, then every down-moving car does. A car moves only if the cell in front of it is empty at that moment; otherwise it waits.',
+    aTermsH: 'Terms',
     aTerms: 'N is the side of the grid in cells: 256 on a 256 x 256 grid. Density is the share of cells that hold a car. A tick is one round of both half-steps.',
     aTerms2: 'Moving is the share of cars that moved on the last tick; average speed is that share averaged over all ticks so far. The seed fixes the random layout, so the same seed and settings always replay the same run.',
+    aProofH: 'What’s proven',
     aProof: 'Austin and Benjamini (2006): with fewer than N/2 cars the traffic always reaches free flow, from any start. On a 256 x 256 grid that is fewer than 128 cars, about 0.2% density.',
-    aProof2: 'Angel, Holroyd and Martin (2005): at densities close enough to 100%, a random start jams forever with probability approaching 1 as the grid grows. Simulations put the change somewhere around 30–40%, moving with grid size, and show long-lived mixed states where jams and free flow coexist (D\u2019Souza, 2005). For large grids nobody has proven that free flow happens at any fixed density, even a few percent.',
+    aProof2: 'Angel, Holroyd and Martin (2005): at densities close enough to 100%, a random start jams forever with probability approaching 1 as the grid grows. Simulations put the change somewhere around 30–40%, moving with grid size, and show long-lived mixed states where jams and free flow coexist (D’Souza, 2005). For large grids nobody has proven that free flow happens at any fixed density, even a few percent.',
+    aDetH: 'How outcomes are detected',
     aDet: 'Free flow: every car moved on each of N ticks in a row. After N steps every car has gone all the way around and is back in place, so the grid repeats forever. Gridlock: no car moved during a tick, so nothing can ever change again.',
-    aDet2: 'Loop: the exact same grid came back while some cars were stuck, so the run cycles forever without settling. Repeats are found by hashing every state (Zobrist keys) with Brent\u2019s cycle-finding method, then confirmed cell by cell. Pause when settled stops the run on any of the three.',
+    aDet2: 'Loop: the exact same grid came back while some cars were stuck, so the run cycles forever without settling. Repeats are found by hashing every state (Zobrist keys) with Brent’s cycle-finding method, then confirmed cell by cell. Pause when settled stops the run on any of the three.',
+    aPatH: 'Patterns',
     aPat: 'Perfect flow: diagonals of right-movers, down-movers and empty cells. Every car moves on every tick at 2/3 density, exactly 2/3 when N is a multiple of 3. Perfect + extra adds any number of random cars (1 by default) to see whether the defect heals.',
     aPat2: 'Staircase: 2N cars, each blocking the next, so nothing moves from tick 1 at only 2/N density. Jam seed: random cars plus a solid block in the center.',
-    kPlay: 'play | pause', kStep: 'step, hold to fast-forward', kReset: 'reset'
+    aKeysH: 'Controls', kPlay: 'play | pause', kStep: 'step, hold to fast-forward', kReset: 'reset', kEsc: 'stop painting',
+    foot1: '© 2026 Dmitry Mysyakov · [MIT License](license) · Source on [GitHub](repo)',
+    foot2: 'Model: [Biham, Middleton & Levine (1992)](model) · Font: [Pixar One](font) © Vasily Shishkin · Built with [Claude Code](claude)'
   },
   ru: {
-    brand: '<span class="acc">BML</span> Пробки', by: 'от dmitry.mdd', gCars: 'Машины', editColor: 'Изменить цвет', editField: 'Изменить цвет поля', hDrawn: 'Рисунок | {d} | машин: {n}', drawnTag: 'рисунок', drawnName: 'Рисунок', kEsc: 'перестать рисовать', aTermsH: 'Обозначения', aPatH: 'Шаблоны', aKeysH: 'Управление', play: 'Пуск', pause: 'Пауза', step: 'Шаг', stepTip: 'Зажмите, чтобы промотать', help: 'О модели',
-    tick: 'Такт', moving: 'Едут', gGrid: 'Поле', size: 'Размер', pow2: 'Степени двойки', mult3: 'Кратные 3',
-    seed: 'Сид', newSeed: 'Новый', gLayout: 'Расстановка', pattern: 'Шаблон',
-    tpl_random: 'Случайно', tpl_perfect: 'Идеальный поток', tpl_defect: 'Идеальный + лишние', tpl_worst: 'Лесенка', tpl_seedjam: 'Затор в центре', tpl_block: 'Плотный блок', tpl_clusters: 'Две толпы', tpl_cross: 'Перекрёсток', tpl_checker: 'Шахматы', tpl_empty: 'Пусто',
-    density: 'Плотность', share: 'Соотношение машин', extra: 'Лишних машин', cellSize: 'Размер клетки', zoom: 'Масштаб', reset: 'Заново', gRun: 'Запуск', speed: 'Скорость',
-    sp0: '1 такт / 10 кадров', sp1: '1 такт / 3 кадра', sp2: '1 такт / кадр', sp3: '4 такта / кадр', sp4: '16 тактов / кадр', sp5: '64 такта / кадр', sp6: 'Турбо',
-    autostop: 'Пауза, когда исход ясен', gDraw: 'Рисование', toolOff: 'Нет', toolY: 'Вправо', toolB: 'Вниз', toolE: 'Ластик', brush: 'Кисть',
-    gColors: 'Цвета', cY: 'Вправо', cB: 'Вниз', cBg: 'Ластик', fix: 'Исправить', dim: 'Затемнять стоящие',
-    warnY: 'Едущие вправо сливаются с полем.', warnB: 'Едущие вниз сливаются с полем.', warnYB: 'Два направления похожи по цвету.',
-    gExport: 'Экспорт', png: 'PNG', rec: 'Запись GIF', recStop: 'Стоп', every: 'Кадр каждые', fps: 'Скорость',
-    ev1: '1 такт', ev2: '2 такта', ev4: '4 такта', ev8: '8 тактов', ev32: '32 такта', fps50: '50 к/с', fps25: '25 к/с', fps12: '12 к/с',
+    brand: '<span class="acc">BML</span> Пробки', by: 'от dmitry.mdd', play: 'Пуск', pause: 'Пауза', step: 'Шаг',
+    stepTip: 'Зажмите, чтобы промотать', help: 'О модели', language: 'Язык', tick: 'Такт', moving: 'Едут', settings: 'Настройки',
+    gGrid: 'Поле', size: 'Размер', pow2: 'Степени двойки', mult3: 'Кратные 3', seed: 'Сид', newSeed: 'Новый', zoom: 'Масштаб',
+    gLayout: 'Расстановка', pattern: 'Шаблон', tpl_random: 'Случайно', tpl_perfect: 'Идеальный поток', tpl_defect: 'Идеальный + лишние',
+    tpl_worst: 'Лесенка', tpl_seedjam: 'Затор в центре', tpl_block: 'Плотный блок', tpl_clusters: 'Две толпы', tpl_cross: 'Перекрёсток',
+    tpl_checker: 'Шахматы', tpl_empty: 'Пусто',
+    density: 'Плотность', share: 'Соотношение машин', extra: 'Лишних машин', cellSize: 'Размер клетки', reset: 'Заново',
+    hPerfect: '{d} | все едут каждый такт', hDefect: '{d} + {n} лишн. Разъедутся?', hWorst: 'машин: {n} | {d} | никто не сдвинется',
+    hSeedjam: 'Случайно + сплошной блок в центре', hBlock: 'Один сплошной квадрат машин в центре, вокруг пусто',
+    hClusters: 'Едущие вправо сбиты в одном углу, едущие вниз — в противоположном',
+    hCross: 'Сплошная полоса едущих вправо пересекает сплошную полосу едущих вниз',
+    hChecker: 'Чередующиеся квадраты машин и пустоты, плотность 50%', hEmpty: 'Выберите машину в разделе «Машины» и рисуйте на поле',
+    hDrawn: 'Рисунок | {d} | машин: {n}',
+    gRun: 'Запуск', speed: 'Скорость', sp0: '1 такт / 10 кадров', sp1: '1 такт / 3 кадра', sp2: '1 такт / кадр', sp3: '4 такта / кадр',
+    sp4: '16 тактов / кадр', sp5: '64 такта / кадр', sp6: 'Турбо', autostop: 'Пауза, когда исход ясен',
+    gCars: 'Машины', cY: 'Вправо', cB: 'Вниз', cBg: 'Ластик', editColor: 'Изменить цвет', editField: 'Изменить цвет поля',
+    resetColors: 'Сбросить цвета', brush: 'Кисть', fix: 'Исправить', dim: 'Затемнять стоящие', warnY: 'Едущие вправо сливаются с полем.',
+    warnB: 'Едущие вниз сливаются с полем.', warnYB: 'Два направления похожи по цвету.',
+    gExport: 'Экспорт', png: 'PNG', rec: 'Запись GIF', recStop: 'Стоп', every: 'Кадр каждые', fps: 'Скорость', ev1: '1 такт',
+    ev2: '2 такта', ev4: '4 такта', ev8: '8 тактов', ev32: '32 такта', fps50: '50 к/с', fps25: '25 к/с', fps12: '12 к/с',
     gifIdle: '', gifRec: 'Запись | кадров: {n} | {mb} МБ', gifDone: 'Готово | кадров: {n} | {mb} МБ', gifSave: 'Сохранить GIF',
-    sCars: 'Машин', sDensity: 'Плотность', sSplit: 'По направлениям', sAvg: 'Ср. скорость',
-    chartTitle: 'Доля едущих по тактам', lin: 'Лин', log: 'Лог', clear: 'Очистить', chartEmpty: 'Нажмите «Пуск». Прошлые запуски останутся для сравнения.',
-    now: 'Сейчас', hide: 'Скрыть', show: 'Показать',
-    phaseTitle: 'Фазовая диаграмма', phaseRun: 'Запустить серию', phaseStop: 'Стоп', phaseHint: 'Итоговая доля едущих машин для многих случайных стартов по плотности.',
+    gifAlt: 'Записанная анимация',
+    gridLabel: 'Поле симуляции', sCars: 'Машин', sDensity: 'Плотность', sSplit: 'По направлениям', sAvg: 'Ср. скорость',
+    chartTitle: 'Доля едущих по тактам', timeScale: 'Шкала времени', lin: 'Лин', log: 'Лог', clear: 'Очистить',
+    chartEmpty: 'Нажмите «Пуск». Прошлые запуски останутся для сравнения.', now: 'Сейчас', hide: 'Скрыть', show: 'Показать',
+    drawnTag: 'рисунок', drawnName: 'Рисунок',
+    stReady: 'Готово', stEmpty: 'Пустое поле', stRun: 'Едут', stPause: 'Пауза', stPending: 'Все едут | {s}/{n}', stFree: 'Поток | такт {t}',
+    stJam: 'Затор | посл. ход {t}', stJam0: 'Затор с самого начала', stLoop: 'Цикл | период {p} | едут {v}',
+    oFree: 'поток с {t}', oJam: 'затор, посл. ход {t}', oJam0: 'затор с начала', oLoop: 'цикл, период {p}', oRun: 'тактов: {t}', oNone: '—',
+    phaseTitle: 'Фазовая диаграмма', phaseRun: 'Запустить серию', phaseStop: 'Стоп',
+    phaseHint: 'Итоговая доля едущих машин для многих случайных стартов по плотности.',
+    phaseEmpty: 'Запустите серию, чтобы найти точку перелома.',
     pN: 'Поле', pFrom: 'От %', pTo: 'До %', pStep: 'Шаг %', pRuns: 'Стартов', pMax: 'Предел тактов',
     pIdle: '', pProg: 'Прогон {done} из {total} | {d} | {s} с', pDone: 'Готово за {s} с.', pTr: ' Ниже 50% скорости около {d}.',
-    pStopped: 'Остановлено. Готовые точки остались на графике.', pBad: 'Проверьте диапазон: «от» меньше «до», оба от 0 до 100, шаг больше 0.',
-    pTooMany: 'Слишком много прогонов ({n}). Увеличьте шаг или уменьшите число стартов.', pMain: ' | основной поток', phaseEmpty: 'Запустите серию, чтобы найти точку перелома.',
+    pStopped: 'Остановлено. Готовые точки остались на графике.',
+    pBad: 'Проверьте диапазон: «от» меньше «до», оба от 0 до 100, шаг больше 0.',
+    pTooMany: 'Слишком много прогонов ({n}). Увеличьте шаг или уменьшите число стартов.', pMain: ' | основной поток',
     sweepRes: 'поток {free} | цикл {loop} | смесь {mixed} | затор {jam}', sweepTr: '50% при {d} | ', starts: 'стартов: {n}', upTo: 'до {t}',
-    oFree: 'поток с {t}', oJam: 'затор, посл. ход {t}', oJam0: 'затор с начала', oLoop: 'цикл, период {p}', oRun: 'тактов: {t}', oNone: '—',
-    stReady: 'Готово', stEmpty: 'Пустое поле', stRun: 'Едут', stPause: 'Пауза', stPending: 'Все едут | {s}/{n}',
-    stFree: 'Поток | такт {t}', stJam: 'Затор | посл. ход {t}', stJam0: 'Затор с самого начала', stLoop: 'Цикл | период {p} | едут {v}',
-    hPerfect: '{d} | все едут каждый такт', hDefect: '{d} + {n} лишн. Разъедутся?', hWorst: 'машин: {n} | {d} | никто не сдвинется',
-    hSeedjam: 'Случайно + сплошной блок в центре', hBlock: 'Один сплошной квадрат машин в центре, вокруг пусто', hClusters: 'Едущие вправо сбиты в одном углу, едущие вниз — в противоположном', hCross: 'Сплошная полоса едущих вправо пересекает сплошную полосу едущих вниз', hChecker: 'Чередующиеся квадраты машин и пустоты, плотность 50%', hEmpty: 'Выберите машину в разделе «Машины» и рисуйте на поле',
-    tSaved: 'Сохранено: {f}', tDeclined: 'Сохранение отменено', tBusy: 'Окно сохранения уже открыто', tFail: 'Не получилось сохранить ({c})', tSweepFirst: 'Сначала запустите серию',
-    aModelH: 'Модель', aProofH: 'Что доказано', aDetH: 'Как определяется исход',
+    tSaved: 'Сохранено: {f}', tDeclined: 'Сохранение отменено', tBusy: 'Окно сохранения уже открыто',
+    tFail: 'Не получилось сохранить ({c})', tSweepFirst: 'Сначала запустите серию',
+    aModelH: 'Модель',
     aModel: 'Бихам, Миддлтон и Левин, 1992. Поле состоит из N x N клеток, края склеены: машина, уехавшая за правый край, появляется слева, а за нижний — сверху. В клетке помещается не больше одной машины.',
     aModel2: 'Машины первого типа ездят только вправо, второго — только вниз. Такт состоит из двух полушагов: сначала все едущие вправо разом пытаются сдвинуться на клетку, затем все едущие вниз. Машина едет, только если клетка впереди в этот момент пуста, иначе ждёт.',
+    aTermsH: 'Обозначения',
     aTerms: 'N — сторона поля в клетках: 256 для поля 256 x 256. Плотность — доля клеток, занятых машинами. Такт — один круг из обоих полушагов.',
     aTerms2: '«Едут» — доля машин, сдвинувшихся на последнем такте, средняя скорость — та же доля, усреднённая по всем тактам. Сид задаёт случайную расстановку: тот же сид с теми же настройками всегда повторяет тот же прогон.',
+    aProofH: 'Что доказано',
     aProof: 'Остин и Бенджамини (2006): если машин меньше N/2, движение всегда приходит к свободному потоку из любого начала. На поле 256 x 256 это меньше 128 машин, около 0,2% плотности.',
     aProof2: 'Анжел, Холройд и Мартин (2005): при плотности, достаточно близкой к 100%, случайная расстановка встаёт навсегда с вероятностью, стремящейся к 1 с ростом поля. По симуляциям перелом где-то около 30–40% и сдвигается с размером поля, а между фазами бывают долгие смешанные состояния, где заторы соседствуют со свободным потоком (Д’Суза, 2005). Для больших полей никто не доказал, что поток распутается при какой-либо фиксированной плотности, даже в несколько процентов.',
+    aDetH: 'Как определяется исход',
     aDet: 'Поток: все машины ехали N тактов подряд. За N шагов каждая машина проходит круг и возвращается на место, значит, поле повторяется вечно. Затор: за такт не сдвинулась ни одна машина, и больше ничего не изменится.',
     aDet2: 'Цикл: поле в точности повторилось, хотя часть машин стоит, значит, прогон будет крутиться вечно, так и не распутавшись. Повторы ищутся по хешу состояния (ключи Зобриста) методом Брента и проверяются поклеточно. Пауза, когда исход ясен, срабатывает на любом из трёх.',
+    aPatH: 'Шаблоны',
     aPat: 'Идеальный поток: диагонали из едущих вправо, едущих вниз и пустых клеток. Все едут каждый такт при плотности 2/3, ровно 2/3, когда N кратно 3. «Идеальный + лишние» добавляет любое число машин в случайные места (по умолчанию 1): залечится ли дефект?',
     aPat2: 'Лесенка: 2N машин, каждая упирается в следующую, поэтому никто не сдвинется с первого такта при плотности всего 2/N. Зародыш затора: случайные машины плюс сплошной блок в центре.',
-    kPlay: 'пуск / пауза', kStep: 'шаг, зажать для перемотки', kReset: 'заново'
+    aKeysH: 'Управление', kPlay: 'пуск / пауза', kStep: 'шаг, зажать для перемотки', kReset: 'заново', kEsc: 'перестать рисовать',
+    foot1: '© 2026 Dmitry Mysyakov · [Лицензия MIT](license) · Исходный код на [GitHub](repo)',
+    foot2: 'Модель: [Бихам, Миддлтон и Левин (1992)](model) · Шрифт: [Pixar One](font) © Василий Шишкин · Сделано в [Claude Code](claude)'
   }
 };
+
 let lang = 'en';
-try { const s = localStorage.getItem('bml.lang'); if (s === 'ru' || s === 'en') lang = s; } catch (e) {}
+try { const saved = localStorage.getItem('bml.lang'); if (saved === 'ru' || saved === 'en') lang = saved; } catch (e) {}
+
 const locale = () => (lang === 'ru' ? 'ru-RU' : 'en-US');
-function t(key, p) {
+
+function t(key, params) {
   let s = (I18N[lang] && I18N[lang][key]) ?? I18N.en[key] ?? key;
-  if (p) s = s.replace(/\{(\w+)\}/g, (m, k) => (p[k] !== undefined ? p[k] : m));
+  if (params) s = s.replace(/\{(\w+)\}/g, (m, k) => (params[k] !== undefined ? params[k] : m));
   return s;
 }
+
 const fmt = (n) => Math.round(n).toLocaleString(locale());
 const pct = (x, d = 1) => (x * 100).toLocaleString(locale(), { minimumFractionDigits: d, maximumFractionDigits: d }) + '%';
+
 function shortNum(v) {
   const ru = lang === 'ru';
   if (v >= 1e6) return (v / 1e6).toLocaleString(locale(), { maximumFractionDigits: 1 }) + (ru ? 'М' : 'M');
@@ -812,99 +1017,173 @@ function shortNum(v) {
   return fmt(v);
 }
 
-/* ===================== state ===================== */
+// targets for [label](id) links inside translated strings
+const LINKS = {
+  license: 'LICENSE',
+  repo: REPO_URL,
+  model: 'https://en.wikipedia.org/wiki/Biham%E2%80%93Middleton%E2%80%93Levine_traffic_model',
+  font: 'https://shishkin.ru',
+  claude: 'https://claude.com/claude-code'
+};
+
+// builds the links as DOM nodes; absolute URLs open in a new tab
+function setLinkedText(el, text) {
+  el.textContent = '';
+  let last = 0;
+  for (const m of text.matchAll(/\[([^\]]+)\]\((\w+)\)/g)) {
+    el.append(text.slice(last, m.index));
+    const a = document.createElement('a');
+    a.href = LINKS[m[2]]; a.textContent = m[1];
+    if (/^https?:/.test(LINKS[m[2]])) { a.target = '_blank'; a.rel = 'noopener'; }
+    el.append(a);
+    last = m.index + m[0].length;
+  }
+  el.append(text.slice(last));
+}
+
+function applyLang() {
+  document.documentElement.lang = lang;
+  for (const el of document.querySelectorAll('[data-i]')) {
+    const key = el.dataset.i;
+    if (key === 'brand') el.innerHTML = t('brand'); else el.textContent = t(key);
+  }
+  for (const el of document.querySelectorAll('[data-i-label]')) el.label = t(el.dataset.iLabel);
+  for (const el of document.querySelectorAll('[data-i-aria]')) el.setAttribute('aria-label', t(el.dataset.iAria));
+  for (const el of document.querySelectorAll('[data-i-title]')) el.title = t(el.dataset.iTitle);
+  for (const el of document.querySelectorAll('[data-i-alt]')) el.alt = t(el.dataset.iAlt);
+  for (const el of document.querySelectorAll('[data-i-links]')) setLinkedText(el, t(el.dataset.iLinks));
+  for (const b of document.querySelectorAll('[data-lang]')) b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+  $('play').textContent = t(running ? 'pause' : 'play');
+  $('rec').textContent = t(recording ? 'recStop' : 'rec');
+  if (worker || mainSweep) $('phaseRun').textContent = t('phaseStop');
+  if (!sweeps.length) $('pStatus').textContent = t('pIdle');
+  densityLabel(); shareLabel(); brushLabel();
+  updateGifStatus(); updateHint(); colorWarnings(); updateReadout(); renderList(); renderSweeps(); drawChart(); drawPhase();
+}
+
+
+// ── State & colours ─────────────────────────────────────────
 const $ = (id) => document.getElementById(id);
-const HIST = ['#e8604c', '#4fbf86', '#b98be0', '#3fbfbf', '#e07fae', '#9aa84f', '#d98b3a', '#7f9be0'];
+
+const SERIES_COLORS = ['#e8604c', '#4fbf86', '#b98be0', '#3fbfbf', '#e07fae', '#9aa84f', '#d98b3a', '#7f9be0'];
+const MAX_PAST_RUNS = 8;
+// patterns that use the density / car ratio sliders
+const DENS_TPL = new Set(['random', 'seedjam', 'block', 'clusters', 'cross']);
+const SHARE_TPL = new Set(['random', 'seedjam', 'block', 'defect']);
+
 let N = 256, M = N * N, g = new Uint8Array(M);
 const H = { a: 0, b: 0 };
 let brent = makeBrent(M);
 let cars = 0, nY = 0, nB = 0;
-let tick = 0, streak = 0, lastMoveTick = 0, final = null, lastMoved = 0, sumV = 0;
+let tick = 0, streak = 0, lastMoveTick = 0, lastMoved = 0, sumV = 0, outcome = null;
+// share of cars that moved, per tick of the current run
 let vel = new Float32Array(8192), velLen = 0;
-let running = false, acc = 0, dirty = true;
-let history = [], histColor = 0, meta = null;
+let running = false, tickAcc = 0, needsRender = true;
+let pastRuns = [], nextRunColor = 0, meta = null;
 let scaleLog = true, tool = 'none', painting = false;
+
+let colors = null;
+// cell value -> canvas pixel (ABGR as a little-endian Uint32)
 const lut = new Uint32Array(8);
-let colors = { y: [242, 183, 5], b: [61, 139, 253], bg: [16, 18, 20] };
 
-const canvas = $('grid');
-let ctx = canvas.getContext('2d', { alpha: false });
-let img = ctx.createImageData(N, N), px32 = new Uint32Array(img.data.buffer);
-
-/* ===================== colours ===================== */
 const hexToRgb = (h) => { const n = parseInt(h.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
 const rgbToHex = (c) => '#' + c.map((v) => v.toString(16).padStart(2, '0')).join('');
+const rgbDistance = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
 const mix = (a, b, k) => a.map((v, i) => Math.round(v * (1 - k) + b[i] * k));
 const css = (c) => 'rgb(' + c.join(',') + ')';
+
+// WCAG relative luminance and contrast ratio
 function lum(c) { const f = (v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); }; return 0.2126 * f(c[0]) + 0.7152 * f(c[1]) + 0.0722 * f(c[2]); }
 function contrast(a, b) { const x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); }
+
+// blend toward black or white until the contrast ratio reaches min
 function ensureContrast(c, bg, min) {
   if (contrast(c, bg) >= min) return c;
   const target = lum(bg) > 0.18 ? [0, 0, 0] : [255, 255, 255];
   for (let k = 0.05; k <= 1.0001; k += 0.05) { const m = mix(c, target, k); if (contrast(m, bg) >= min) return m; }
   return target;
 }
+
 function parseCss(v) {
   v = v.trim();
   if (v[0] === '#') { if (v.length === 4) v = '#' + v[1] + v[1] + v[2] + v[2] + v[3] + v[3]; return hexToRgb(v); }
   const m = v.match(/\d+(\.\d+)?/g); return m ? m.slice(0, 3).map(Number) : [128, 128, 128];
 }
+
 function themeColor(name) { return parseCss(getComputedStyle(document.documentElement).getPropertyValue(name)); }
+
+function readColors() { return { y: hexToRgb($('cY').value), b: hexToRgb($('cB').value), bg: hexToRgb($('cBg').value) }; }
+
+// UI accents follow the car colours; the -line variants keep 3:1 contrast with the page background
 function applyAccents() {
   const root = document.documentElement.style;
-  ['--y', '--y-ink', '--y-line', '--y-shadow', '--b', '--b-ink', '--b-line', '--b-shadow'].forEach((p) => root.removeProperty(p));
   const panel = themeColor('--bg');
   const set = (k, c) => {
     root.setProperty('--' + k, css(c));
     root.setProperty('--' + k + '-ink', contrast(c, [0, 0, 0]) >= contrast(c, [255, 255, 255]) ? '#000000' : '#ffffff');
     root.setProperty('--' + k + '-line', css(ensureContrast(c, panel, 3)));
-    root.setProperty('--' + k + '-shadow', css(mix(c, [0, 0, 0], 0.75)));
   };
   set('y', colors.y); set('b', colors.b);
   drawChart(); drawPhase();
 }
+
 function colorWarnings() {
   const w = [];
   if (contrast(colors.y, colors.bg) < 1.6) w.push(t('warnY'));
   if (contrast(colors.b, colors.bg) < 1.6) w.push(t('warnB'));
-  const dist = Math.hypot(colors.y[0] - colors.b[0], colors.y[1] - colors.b[1], colors.y[2] - colors.b[2]);
-  if (dist < 70) w.push(t('warnYB'));
+  if (rgbDistance(colors.y, colors.b) < 70) w.push(t('warnYB'));
   $('warn').hidden = !w.length;
   $('warnText').textContent = w.join(' ');
 }
+
 function fixColors() {
-  const dist = Math.hypot(colors.y[0] - colors.b[0], colors.y[1] - colors.b[1], colors.y[2] - colors.b[2]);
-  if (dist < 70) {
+  if (rgbDistance(colors.y, colors.b) < 70) {
     const alt = [[61, 139, 253], [224, 69, 123], [40, 200, 120]];
-    colors.b = alt.find((c) => Math.hypot(colors.y[0] - c[0], colors.y[1] - c[1], colors.y[2] - c[2]) > 140) || [61, 139, 253];
+    colors.b = alt.find((c) => rgbDistance(colors.y, c) > 140) || [61, 139, 253];
   }
   colors.y = ensureContrast(colors.y, colors.bg, 2.5);
   colors.b = ensureContrast(colors.b, colors.bg, 2.5);
   $('cY').value = rgbToHex(colors.y); $('cB').value = rgbToHex(colors.b);
   buildLut();
 }
+
+// back to the colours in the HTML value attributes
+function resetColors() {
+  for (const id of ['cY', 'cB', 'cBg']) $(id).value = $(id).defaultValue;
+  colors = readColors();
+  buildLut();
+}
+
+// indexed by cell value, so it doubles as the GIF palette
 function paletteRGB() {
   const dim = $('stuck').checked;
   const ys = dim ? mix(colors.y, colors.bg, 0.55) : colors.y;
   const bs = dim ? mix(colors.b, colors.bg, 0.55) : colors.b;
   return [colors.bg, colors.y, colors.b, colors.bg, colors.bg, ys, bs, colors.bg];
 }
+
 function buildLut() {
   const p = paletteRGB();
   for (let i = 0; i < 8; i++) lut[i] = ((255 << 24) | (p[i][2] << 16) | (p[i][1] << 8) | p[i][0]) >>> 0;
   canvas.parentElement.style.background = css(colors.bg);
   $('swY').style.background = css(colors.y); $('swB').style.background = css(colors.b); $('swF').style.background = css(colors.bg);
   colorWarnings(); applyAccents();
-  dirty = true;
+  needsRender = true;
 }
 
-/* ===================== field ===================== */
+
+// ── Canvas & rendering ──────────────────────────────────────
+const canvas = $('grid');
+let ctx = null, img = null, px32 = null;
+
 function setupCanvas() {
   canvas.width = N; canvas.height = N;
   ctx = canvas.getContext('2d', { alpha: false });
   img = ctx.createImageData(N, N); px32 = new Uint32Array(img.data.buffer);
-  fitCanvas(); dirty = true;
+  fitCanvas(); needsRender = true;
 }
+
+// snap to a whole number of device pixels per cell unless that shrinks the field by more than 15%
 function fitCanvas() {
   const box = $('fieldbox');
   const dpr = window.devicePixelRatio || 1;
@@ -914,69 +1193,202 @@ function fitCanvas() {
   const avail = Math.max(64, Math.min(availW, availH) * (+$('zoom').value / 100));
   const dev = Math.floor(avail * dpr);
   const crisp = (Math.floor(dev / N) * N) / dpr;
-  const css = dev >= N && crisp >= avail * 0.85 ? crisp : avail;
-  canvas.style.width = css + 'px'; canvas.style.height = css + 'px';
+  const size = dev >= N && crisp >= avail * 0.85 ? crisp : avail;
+  canvas.style.width = size + 'px'; canvas.style.height = size + 'px';
 }
-function render() { for (let i = 0; i < M; i++) px32[i] = lut[g[i]]; ctx.putImageData(img, 0, 0); dirty = false; }
-function countCars() { nY = 0; nB = 0; for (let i = 0; i < M; i++) { const v = g[i] & 3; if (v === 1) nY++; else if (v === 2) nB++; } cars = nY + nB; }
 
-/* ===================== simulation ===================== */
-function resetDetection() { fullHash(g, H); brent.reset(g, H); final = null; streak = 0; }
-function resetRun() { tick = 0; lastMoveTick = 0; lastMoved = 0; sumV = 0; velLen = 0; acc = 0; resetDetection(); }
+function render() {
+  for (let i = 0; i < M; i++) px32[i] = lut[g[i]];
+  ctx.putImageData(img, 0, 0);
+  needsRender = false;
+}
+
+
+// ── Simulation loop ─────────────────────────────────────────
+function countCars() {
+  nY = 0; nB = 0;
+  for (let i = 0; i < M; i++) { const v = g[i] & 3; if (v === 1) nY++; else if (v === 2) nB++; }
+  cars = nY + nB;
+}
+
+function resetDetection() { fullHash(g, H); brent.reset(g, H); outcome = null; streak = 0; }
+function resetRun() { tick = 0; lastMoveTick = 0; lastMoved = 0; sumV = 0; velLen = 0; tickAcc = 0; resetDetection(); }
+
 function archiveRun() {
   if (!meta || tick === 0 || velLen === 0) return;
-  history.push({ meta: { ...meta }, color: HIST[histColor++ % HIST.length], data: vel.slice(0, velLen), len: velLen, out: final ? { ...final } : null, ticks: tick, on: true });
-  if (history.length > 8) history.shift();
+  pastRuns.push({ meta: { ...meta }, color: SERIES_COLORS[nextRunColor++ % SERIES_COLORS.length], data: vel.slice(0, velLen), len: velLen, out: outcome ? { ...outcome } : null, ticks: tick, on: true });
+  if (pastRuns.length > MAX_PAST_RUNS) pastRuns.shift();
 }
-const DENS_TPL = new Set(['random', 'seedjam', 'block', 'clusters', 'cross']);
-const SHARE_TPL = new Set(['random', 'seedjam', 'block', 'defect']);
-function shareText() { const v = +$('share').value; $('shareOut').textContent = v + ' : ' + (100 - v); }
+
+// keep === true replaces the current run instead of archiving it; listeners pass an Event here
 function place(keep) {
   if (keep !== true) archiveRun();
   const tpl = $('template').value;
-  let extra = 0;
   const maxD = tpl === 'clusters' ? 50 : 100;
-  if ($('density').max != maxD) { $('density').max = maxD; if (+$('density').value > maxD) { $('density').value = maxD; $('densityOut').textContent = pct(maxD / 100); } }
+  if (+$('density').max !== maxD) {
+    $('density').max = maxD;
+    if (+$('density').value > maxD) { $('density').value = maxD; densityLabel(); }
+  }
   const density = +$('density').value / 100, share = +$('share').value / 100;
   const seed = $('seed').value.trim() || '0';
   const rand = seedFrom(seed + '|' + N + '|' + tpl);
+  let extra = 0;
   if (tpl === 'random') fillRandom(g, N, density, share, rand);
   else if (tpl === 'perfect') fillPerfect(g, N);
-  else if (tpl === 'defect') {
-    fillPerfect(g, N);
-    const empties = []; for (let i = 0; i < M; i++) if (g[i] === 0) empties.push(i);
-    extra = Math.min(empties.length, Math.max(1, Math.floor(+$('extra').value) || 1));
-    const ny = Math.round(extra * share);
-    for (let i = 0; i < extra; i++) {
-      const j = i + Math.floor(rand() * (empties.length - i)), tmp = empties[i]; empties[i] = empties[j]; empties[j] = tmp;
-      g[empties[i]] = i < ny ? 1 : 2;
-    }
-  } else if (tpl === 'worst') fillWorst(g, N);
-  else if (tpl === 'seedjam') {
-    fillRandom(g, N, density, share, rand);
-    const s = Math.max(4, N >> 3), o = (N - s) >> 1;
-    for (let y = o; y < o + s; y++) for (let x = o; x < o + s; x++) g[y * N + x] = rand() < share ? 1 : 2;
-  } else if (tpl === 'block') fillBlock(g, N, density, share, rand);
+  else if (tpl === 'defect') extra = fillDefect(g, N, Math.max(1, Math.floor(+$('extra').value) || 1), share, rand);
+  else if (tpl === 'worst') fillWorst(g, N);
+  else if (tpl === 'seedjam') fillSeedJam(g, N, density, share, rand);
+  else if (tpl === 'block') fillBlock(g, N, density, share, rand);
   else if (tpl === 'clusters') fillClusters(g, N, density, rand);
   else if (tpl === 'cross') fillCross(g, N, density);
   else if (tpl === 'checker') fillChecker(g, N, Math.max(1, +$('cell').value));
   else g.fill(0);
   countCars(); resetRun();
   meta = { tpl, N, d: density, seed, extra };
-  const usesD = DENS_TPL.has(tpl);
-  $('densityField').hidden = !usesD; $('presets').hidden = !usesD; $('shareField').hidden = !SHARE_TPL.has(tpl); $('extraField').hidden = tpl !== 'defect'; $('cellField').hidden = tpl !== 'checker';
+  const usesDensity = DENS_TPL.has(tpl);
+  $('densityField').hidden = !usesDensity;
+  $('presets').hidden = !usesDensity;
+  $('shareField').hidden = !SHARE_TPL.has(tpl);
+  $('extraField').hidden = tpl !== 'defect';
+  $('cellField').hidden = tpl !== 'checker';
   updateHint();
-  dirty = true;
+  needsRender = true;
   if (recording) captureFrame(true);
   updateReadout(); renderList(); drawChart();
 }
+
+function pushVel(v) {
+  if (velLen >= vel.length) {
+    if (vel.length >= 1 << 23) return; // history stops growing at 8M ticks
+    const n = new Float32Array(vel.length * 2); n.set(vel); vel = n;
+  }
+  vel[velLen++] = v;
+}
+
+// a cycle where every car always moves is free flow, where none moves a jam, otherwise a loop
+function classifyCycle(p) {
+  let s = 0, all1 = true, all0 = true;
+  for (let i = Math.max(0, velLen - p); i < velLen; i++) { const v = vel[i]; s += v; if (v !== 1) all1 = false; if (v !== 0) all0 = false; }
+  if (all1) outcome = { type: 'free', tick: tick - streak + 1, fresh: true };
+  else if (all0) outcome = { type: 'jam', tick: lastMoveTick, fresh: true };
+  else outcome = { type: 'loop', tick, period: p, v: s / p, fresh: true };
+}
+
+function tickOnce() {
+  // the hash is only needed until the outcome is known
+  const track = outcome ? null : H;
+  const m = stepYellow(g, N, track) + stepBlue(g, N, track);
+  tick++; lastMoved = m;
+  const v = cars ? m / cars : 0;
+  pushVel(v); sumV += v;
+  if (cars > 0) {
+    if (m > 0) lastMoveTick = tick;
+    if (m === cars) streak++; else streak = 0;
+    if (!outcome) {
+      if (m === 0) outcome = { type: 'jam', tick: lastMoveTick, fresh: true };
+      // after N all-moving ticks every car is back where it started
+      else if (streak >= N) outcome = { type: 'free', tick: tick - streak + 1, fresh: true };
+      else { const p = brent.check(g, H); if (p) classifyCycle(p); }
+    }
+  }
+  if (recording && tick % gifEvery === 0) captureFrame(false);
+  needsRender = true;
+}
+
+// returns true when a newly found outcome paused the run
+function settledStop() {
+  if (outcome && outcome.fresh) {
+    outcome.fresh = false; renderList();
+    if ($('autostop').checked) { setRunning(false); return true; }
+  }
+  return false;
+}
+
+function setRunning(on) { running = on; $('play').textContent = t(on ? 'pause' : 'play'); updateReadout(); }
+
+let hold = null;
+function singleStep() { setRunning(false); tickOnce(); settledStop(); updateReadout(); updateCurRow(); drawChart(); }
+function beginHold() { singleStep(); hold = { t0: performance.now(), acc: 0 }; }
+function endHold() { hold = null; }
+
+function playTicks() {
+  const sp = $('speed').value;
+  if (sp === 'turbo') {
+    const t0 = performance.now();
+    do { tickOnce(); if (settledStop()) break; } while (performance.now() - t0 < 14);
+  } else {
+    tickAcc += +sp;
+    while (tickAcc >= 1) { tickAcc -= 1; tickOnce(); if (settledStop()) { tickAcc = 0; break; } }
+  }
+}
+
+// holding Step ramps up to half the play speed over about a second
+function holdTicks(now) {
+  const held = now - hold.t0;
+  if (held <= 300) return;
+  const k = Math.min(1, (held - 300) / 900), sp = $('speed').value;
+  if (sp === 'turbo') {
+    const t0 = performance.now(), budget = 0.5 + 6.5 * k;
+    do { tickOnce(); if (settledStop()) { hold = null; break; } } while (performance.now() - t0 < budget);
+  } else {
+    hold.acc += (+sp / 2) * (0.1 + 0.9 * k);
+    while (hold && hold.acc >= 1) { hold.acc -= 1; tickOnce(); if (settledStop()) hold = null; }
+  }
+}
+
+let lastReadout = 0, lastChart = 0;
+function frame(now) {
+  if (running) playTicks();
+  if (hold && !running) holdTicks(now);
+  if (mainSweep) handleSweepEvents(mainSweep.run(running ? 6 : 12));
+  if (paintDirty) {
+    paintDirty = false; updateReadout(); updateHint();
+    const row = $('curRow'); if (row && meta) row.querySelector('.name').textContent = t('now') + ': ' + metaLabel(meta);
+  }
+  if (needsRender) render();
+  if (running || hold || now - lastReadout > 250) { updateReadout(); lastReadout = now; }
+  if (now - lastChart > (running || hold ? 200 : 700)) { drawChart(); updateCurRow(); lastChart = now; }
+  requestAnimationFrame(frame);
+}
+
+
+// ── Readouts ────────────────────────────────────────────────
+const carDensityText = () => pct(cars / M, cars / M < 0.01 ? 2 : 1);
+
+function outcomeText(o, ticks) {
+  if (!o) return ticks ? t('oRun', { t: fmt(ticks) }) : t('oNone');
+  if (o.type === 'free') return t('oFree', { t: fmt(o.tick) });
+  if (o.type === 'jam') return o.tick ? t('oJam', { t: fmt(o.tick) }) : t('oJam0');
+  return t('oLoop', { p: fmt(o.period) });
+}
+
+function updateReadout() {
+  $('tick').textContent = tick < 1e6 ? fmt(tick) : (tick / 1e6).toLocaleString(locale(), { maximumFractionDigits: 2 }) + (lang === 'ru' ? 'М' : 'M');
+  $('carCount').textContent = fmt(cars);
+  $('realDensity').textContent = carDensityText();
+  $('nY').textContent = fmt(nY); $('nB').textContent = fmt(nB);
+  const v = tick ? lastMoved / Math.max(1, cars) : null;
+  $('movingPct').textContent = v === null ? '—' : pct(v);
+  $('movingBar').style.width = v === null ? '0' : (Math.round(v * 20) * 5) + '%';
+  $('avgV').textContent = tick ? pct(sumV / tick) : '—';
+  let s = 'idle', text;
+  if (cars === 0) text = t('stEmpty');
+  else if (outcome && outcome.type === 'free') { s = 'free'; text = t('stFree', { t: fmt(outcome.tick) }); }
+  else if (outcome && outcome.type === 'jam') { s = 'jam'; text = outcome.tick ? t('stJam', { t: fmt(outcome.tick) }) : t('stJam0'); }
+  else if (outcome && outcome.type === 'loop') { s = 'loop'; text = t('stLoop', { p: fmt(outcome.period), v: pct(outcome.v) }); }
+  else if (streak > 0 && tick > 0) { s = 'pending'; text = t('stPending', { s: fmt(streak), n: fmt(N) }); }
+  else if (running) { s = 'run'; text = t('stRun'); }
+  else text = t(tick ? 'stPause' : 'stReady');
+  $('state').dataset.s = s; $('stateText').textContent = text;
+}
+
 function updateHint() {
   const tpl = meta ? meta.tpl : 'random';
+  const d = carDensityText();
   let s = '';
-  if (meta && meta.drawn) { $('tplHint').textContent = t('hDrawn', { d: pct(cars / M, cars / M < 0.01 ? 2 : 1), n: fmt(cars) }); $('tplHint').hidden = false; return; }
-  const d = pct(cars / M, cars / M < 0.01 ? 2 : 1);
-  if (tpl === 'perfect') s = t('hPerfect', { d });
-  else if (tpl === 'defect') s = t('hDefect', { d: pct((cars - (meta ? meta.extra : 1)) / M), n: fmt(meta ? meta.extra : 1) });
+  if (meta && meta.drawn) s = t('hDrawn', { d, n: fmt(cars) });
+  else if (tpl === 'perfect') s = t('hPerfect', { d });
+  else if (tpl === 'defect') s = t('hDefect', { d: pct((cars - meta.extra) / M), n: fmt(meta.extra) });
   else if (tpl === 'worst') s = t('hWorst', { n: fmt(cars), d });
   else if (tpl === 'seedjam') s = t('hSeedjam');
   else if (tpl === 'block') s = t('hBlock');
@@ -986,94 +1398,56 @@ function updateHint() {
   else if (tpl === 'empty') s = t('hEmpty');
   $('tplHint').textContent = s; $('tplHint').hidden = !s;
 }
-function pushVel(v) {
-  if (velLen >= vel.length) { if (vel.length >= 1 << 23) return; const n = new Float32Array(vel.length * 2); n.set(vel); vel = n; }
-  vel[velLen++] = v;
-}
-function classifyCycle(p) {
-  let s = 0, all1 = true, all0 = true;
-  for (let i = Math.max(0, velLen - p); i < velLen; i++) { const v = vel[i]; s += v; if (v !== 1) all1 = false; if (v !== 0) all0 = false; }
-  if (all1) final = { type: 'free', tick: tick - streak + 1, fresh: true };
-  else if (all0) final = { type: 'jam', tick: lastMoveTick, fresh: true };
-  else final = { type: 'loop', tick, period: p, v: s / p, fresh: true };
-}
-function tickOnce() {
-  const track = !final ? H : null;
-  const m = stepYellow(g, N, track) + stepBlue(g, N, track);
-  tick++; lastMoved = m;
-  const v = cars ? m / cars : 0;
-  pushVel(v); sumV += v;
-  if (cars > 0) {
-    if (m > 0) lastMoveTick = tick;
-    if (m === cars) streak++; else streak = 0;
-    if (!final) {
-      if (m === 0) final = { type: 'jam', tick: lastMoveTick, fresh: true };
-      else if (streak >= N) final = { type: 'free', tick: tick - streak + 1, fresh: true };
-      else { const p = brent.check(g, H); if (p) classifyCycle(p); }
-    }
-  }
-  if (recording && tick % gifEvery === 0) captureFrame(false);
-  dirty = true;
-}
-function settledStop() {
-  if (final && final.fresh) { final.fresh = false; renderList(); if ($('autostop').checked) { setRunning(false); return true; } }
-  return false;
-}
-function setRunning(on) { running = on; $('play').textContent = t(on ? 'pause' : 'play'); updateReadout(); }
 
-/* ===================== readouts ===================== */
-function outcomeText(o, ticks) {
-  if (!o) return ticks ? t('oRun', { t: fmt(ticks) }) : t('oNone');
-  if (o.type === 'free') return t('oFree', { t: fmt(o.tick) });
-  if (o.type === 'jam') return o.tick ? t('oJam', { t: fmt(o.tick) }) : t('oJam0');
-  return t('oLoop', { p: fmt(o.period) });
-}
-function updateReadout() {
-  $('tick').textContent = tick < 1e6 ? fmt(tick) : (tick / 1e6).toLocaleString(locale(), { maximumFractionDigits: 2 }) + (lang === 'ru' ? 'М' : 'M');
-  $('carCount').textContent = fmt(cars);
-  $('realDensity').textContent = pct(cars / M, cars / M < 0.01 ? 2 : 1);
-  $('nY').textContent = fmt(nY); $('nB').textContent = fmt(nB);
-  const v = tick ? lastMoved / Math.max(1, cars) : null;
-  $('movingPct').textContent = v === null ? '—' : pct(v);
-  $('movingBar').style.width = v === null ? '0' : (Math.round(v * 20) * 5) + '%';
-  $('avgV').textContent = tick ? pct(sumV / tick) : '—';
-  let s = 'idle', txt;
-  if (cars === 0) txt = t('stEmpty');
-  else if (final && final.type === 'free') { s = 'free'; txt = t('stFree', { t: fmt(final.tick) }); }
-  else if (final && final.type === 'jam') { s = 'jam'; txt = final.tick ? t('stJam', { t: fmt(final.tick) }) : t('stJam0'); }
-  else if (final && final.type === 'loop') { s = 'loop'; txt = t('stLoop', { p: fmt(final.period), v: pct(final.v) }); }
-  else if (streak > 0 && tick > 0) { s = 'pending'; txt = t('stPending', { s: fmt(streak), n: fmt(N) }); }
-  else if (running) { s = 'run'; txt = t('stRun'); }
-  else txt = t(tick ? 'stPause' : 'stReady');
-  $('state').dataset.s = s; $('stateText').textContent = txt;
+
+// ── Charts ──────────────────────────────────────────────────
+function themeColors() {
+  return { fg: themeColor('--fg'), muted: themeColor('--muted'), line: themeColor('--line') };
 }
 
-/* ===================== pixel charts ===================== */
-function tokens() {
-  return { fg: themeColor('--fg'), muted: themeColor('--muted'), line: themeColor('--line'), b: themeColor('--b-line') };
-}
-function prepCanvas(cv) {
+// the plot is a cols x rows grid of P x P device-pixel cells inside margins L, R, T
+function chartFrame(cv) {
   const r = cv.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
-  const W = Math.max(10, Math.round(r.width * dpr)), Hh = Math.max(10, Math.round(r.height * dpr));
-  if (cv.width !== W || cv.height !== Hh) { cv.width = W; cv.height = Hh; }
+  const width = Math.max(10, Math.round(r.width * dpr)), height = Math.max(10, Math.round(r.height * dpr));
+  if (cv.width !== width || cv.height !== height) { cv.width = width; cv.height = height; }
   const c = cv.getContext('2d');
-  c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, W, Hh); c.imageSmoothingEnabled = false;
+  c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, width, height); c.imageSmoothingEnabled = false;
   const P = Math.max(2, Math.round(2 * dpr));
   const fs = 14 * Math.max(1, Math.round(dpr));
   c.font = fs + 'px "Pixar One", monospace'; c.letterSpacing = (0.06 * fs) + 'px';
-  return { c, W, H: Hh, P, fs };
+  const L = Math.ceil(c.measureText('100%').width) + P * 5, R = P * 4, T = P * 4, B = fs + P * 6;
+  const cols = Math.max(2, Math.floor((width - L - R) / P)), rows = Math.max(2, Math.floor((height - T - B) / P));
+  return { c, P, fs, L, R, T, cols, rows };
 }
+
+// 1-2-5 step that splits range into about `target` parts
 function niceStep(range, target) { const raw = range / target, p = Math.pow(10, Math.floor(Math.log10(raw))), f = raw / p; return (f < 1.5 ? 1 : f < 3.5 ? 2 : f < 7.5 ? 5 : 10) * p; }
-function axes(c, L, T, cols, rows, P, fs, tk, yLabels) {
-  c.fillStyle = css(tk.line);
-  for (let k = 0; k <= 4; k++) {
-    const ry = T + Math.round((rows - 1) * (1 - k / 4)) * P;
-    for (let x = 0; x < cols; x += 2) c.fillRect(L + x * P, ry, P, P);
-  }
-  c.fillStyle = css(tk.muted); c.textAlign = 'right'; c.textBaseline = 'middle';
-  for (let k = 0; k <= 4; k++) { const ry = T + Math.round((rows - 1) * (1 - k / 4)) * P; c.fillText(yLabels[k], L - P * 3, ry + P / 2); }
+
+function drawAxes(f, theme) {
+  const { c, P, L, T, cols, rows } = f;
+  const guideY = (k) => T + Math.round((rows - 1) * (1 - k / 4)) * P;
+  c.fillStyle = css(theme.line);
+  for (let k = 0; k <= 4; k++) for (let x = 0; x < cols; x += 2) c.fillRect(L + x * P, guideY(k), P, P);
+  c.fillStyle = css(theme.muted); c.textAlign = 'right'; c.textBaseline = 'middle';
+  for (let k = 0; k <= 4; k++) c.fillText(k * 25 + '%', L - P * 3, guideY(k) + P / 2);
 }
-function plotSeries(c, L, T, rows, P, color, valueAt, colFrom, colTo) {
+
+// marks are [x, label] pairs; a label that would overlap the previous one is skipped
+function drawXTicks(f, theme, marks) {
+  const { c, P, fs, L, T, cols, rows } = f;
+  c.textAlign = 'center'; c.textBaseline = 'top'; c.fillStyle = css(theme.muted);
+  let lastX = -1e9;
+  for (const [x, label] of marks) {
+    c.fillRect(x, T + rows * P + P, P, P * 2);
+    const w = c.measureText(label).width;
+    const cx = Math.min(Math.max(x, L + w / 2), L + cols * P - w / 2);
+    if (cx - w / 2 > lastX + fs) { c.fillText(label, Math.round(cx), T + rows * P + P * 4); lastX = cx + w / 2; }
+  }
+}
+
+// one cell per column; a vertical run joins each value to the previous one so the line has no gaps
+function plotSeries(f, color, valueAt, colFrom, colTo) {
+  const { c, P, L, T, rows } = f;
   c.fillStyle = color;
   let prev = null;
   for (let x = colFrom; x <= colTo; x++) {
@@ -1085,71 +1459,61 @@ function plotSeries(c, L, T, rows, P, color, valueAt, colFrom, colTo) {
     prev = row;
   }
 }
-// Centre the empty-state label between the 75% and 50% guide lines, inside the plot area.
-function placeEmpty(id, L, R, T, rows, P) {
-  const dpr = window.devicePixelRatio || 1, el = $(id);
+
+// centres the empty-state label on the midpoint between the 75% and 50% guides
+function placeEmpty(el, f) {
+  const { P, L, R, T, rows } = f, dpr = window.devicePixelRatio || 1;
   const y3 = T + Math.round((rows - 1) * 0.25) * P, y2 = T + Math.round((rows - 1) * 0.5) * P;
-  const mid = ((y3 + y2) / 2 + P / 2) / dpr;
   el.style.left = (L / dpr) + 'px'; el.style.right = (R / dpr) + 'px';
-  el.style.top = (mid - 10) + 'px'; el.style.height = '20px'; el.style.bottom = 'auto';
+  el.style.top = ((y3 + y2) / 2 + P / 2) / dpr + 'px';
 }
+
 function drawChart() {
-  const cv = $('chart'); if (!cv) return;
-  const { c, W, H: Hh, P, fs } = prepCanvas(cv);
-  const tk = tokens();
-  const L = Math.ceil(c.measureText('100%').width) + P * 5, R = P * 4, T = P * 4, B = fs + P * 6;
-  const cols = Math.max(2, Math.floor((W - L - R) / P)), rows = Math.max(2, Math.floor((Hh - T - B) / P));
+  const f = chartFrame($('chart')), theme = themeColors();
+  const { P, L, cols } = f;
   let maxT = Math.max(10, tick);
-  for (const h of history) if (h.on) maxT = Math.max(maxT, h.len);
+  for (const run of pastRuns) if (run.on) maxT = Math.max(maxT, run.len);
   const lg = Math.log10(maxT);
   const tAt = scaleLog ? (x) => Math.pow(10, (x / (cols - 1)) * lg) : (x) => (x / (cols - 1)) * maxT;
   const xOf = scaleLog ? (v) => (Math.log10(Math.max(1, v)) / lg) * (cols - 1) : (v) => (v / maxT) * (cols - 1);
-  axes(c, L, T, cols, rows, P, fs, tk, ['0%', '25%', '50%', '75%', '100%']);
-  c.textAlign = 'center'; c.textBaseline = 'top'; c.fillStyle = css(tk.muted);
-  const xt = [];
-  if (scaleLog) { for (let p = 1; p <= maxT; p *= 10) xt.push(p); } else { const s = niceStep(maxT, 5); for (let v = 0; v <= maxT; v += s) xt.push(v); }
-  let lastX = -1e9;
-  for (const v of xt) {
-    const x = L + Math.round(xOf(v)) * P;
-    c.fillRect(x, T + rows * P + P, P, P * 2);
-    const lbl = shortNum(v), w = c.measureText(lbl).width;
-    const cx = Math.min(Math.max(x, L + w / 2), L + cols * P - w / 2);
-    if (cx - w / 2 > lastX + fs) { c.fillText(lbl, Math.round(cx), T + rows * P + P * 4); lastX = cx + w / 2; }
-  }
-  const series = history.filter((h) => h.on).map((h) => ({ data: h.data, len: h.len, color: h.color }));
-  series.push({ data: vel, len: velLen, color: css(tk.fg) });
+  drawAxes(f, theme);
+  const ticks = [];
+  if (scaleLog) { for (let p = 1; p <= maxT; p *= 10) ticks.push(p); } else { const s = niceStep(maxT, 5); for (let v = 0; v <= maxT; v += s) ticks.push(v); }
+  drawXTicks(f, theme, ticks.map((v) => [L + Math.round(xOf(v)) * P, shortNum(v)]));
+  const series = pastRuns.filter((run) => run.on).map((run) => ({ data: run.data, len: run.len, color: run.color }));
+  series.push({ data: vel, len: velLen, color: css(theme.fg) });
   for (const s of series) {
     if (!s.len) continue;
     const end = Math.min(cols - 1, Math.floor(xOf(s.len)));
-    plotSeries(c, L, T, rows, P, s.color, (x) => {
-      let a = Math.max(1, Math.floor(tAt(x))), b = Math.min(s.len, Math.max(a, Math.floor(tAt(x + 1)) - 0));
+    // each column shows the mean of the ticks it covers
+    plotSeries(f, s.color, (x) => {
+      const a = Math.max(1, Math.floor(tAt(x))), b = Math.min(s.len, Math.max(a, Math.floor(tAt(x + 1))));
       if (a > s.len) return null;
-      let sum = 0, n = 0; for (let k = a; k <= b; k++) { sum += s.data[k - 1]; n++; }
+      let sum = 0, n = 0;
+      for (let k = a; k <= b; k++) { sum += s.data[k - 1]; n++; }
       return n ? sum / n : null;
     }, 0, end);
   }
   $('chartEmpty').hidden = series.some((s) => s.len > 0);
-  placeEmpty('chartEmpty', L, R, T, rows, P);
+  placeEmpty($('chartEmpty'), f);
 }
-function renderList() {
-  const ul = $('runList'); ul.textContent = '';
-  const add = (color, name, res, h) => {
-    const li = document.createElement('li');
-    if (h && !h.on) li.className = 'off';
-    const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = color;
-    const nm = document.createElement('span'); nm.className = 'name'; nm.textContent = name;
-    const rs = document.createElement('span'); rs.className = 'res'; rs.textContent = res;
-    li.append(sw, nm, rs);
-    if (h) {
-      const b = document.createElement('button'); b.type = 'button'; b.textContent = t(h.on ? 'hide' : 'show');
-      b.addEventListener('click', () => { h.on = !h.on; renderList(); drawChart(); });
-      li.append(b);
-    } else { li.append(document.createElement('span')); li.id = 'curRow'; }
-    ul.append(li);
-  };
-  if (meta) add('var(--fg)', t('now') + ': ' + metaLabel(meta), outcomeText(final, tick), null);
-  for (let i = history.length - 1; i >= 0; i--) { const h = history[i]; add(h.color, metaLabel(h.meta), outcomeText(h.out, h.ticks), h); }
+
+// without `entry` this is the live run row (#curRow), which has no toggle
+function listRow(color, name, res, entry, redraw) {
+  const li = document.createElement('li');
+  if (entry && !entry.on) li.className = 'off';
+  const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = color;
+  const nm = document.createElement('span'); nm.className = 'name'; nm.textContent = name;
+  const rs = document.createElement('span'); rs.className = 'res'; rs.textContent = res;
+  li.append(sw, nm, rs);
+  if (entry) {
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = t(entry.on ? 'hide' : 'show');
+    b.addEventListener('click', () => { entry.on = !entry.on; redraw(); });
+    li.append(b);
+  } else { li.append(document.createElement('span')); li.id = 'curRow'; }
+  return li;
 }
+
 function metaLabel(m) {
   let s = (m.tpl === 'empty' ? t('drawnName') : t('tpl_' + m.tpl) + (m.drawn ? ' + ' + t('drawnTag') : '')) + ' | ' + m.N + 'x' + m.N;
   if (m.drawn || m.tpl === 'empty') s += ' | ' + pct(m.dd || 0);
@@ -1158,14 +1522,28 @@ function metaLabel(m) {
   if (m.tpl === 'random' || m.tpl === 'seedjam' || m.tpl === 'defect') s += ' | #' + m.seed;
   return s;
 }
-function updateCurRow() { const r = $('curRow'); if (r) r.querySelector('.res').textContent = outcomeText(final, tick); }
 
-/* ===================== drawing ===================== */
+function renderList() {
+  const ul = $('runList'); ul.textContent = '';
+  if (meta) ul.append(listRow('var(--fg)', t('now') + ': ' + metaLabel(meta), outcomeText(outcome, tick)));
+  for (let i = pastRuns.length - 1; i >= 0; i--) {
+    const run = pastRuns[i];
+    ul.append(listRow(run.color, metaLabel(run.meta), outcomeText(run.out, run.ticks), run, () => { renderList(); drawChart(); }));
+  }
+}
+
+function updateCurRow() { const row = $('curRow'); if (row) row.querySelector('.res').textContent = outcomeText(outcome, tick); }
+
+
+// ── Drawing ─────────────────────────────────────────────────
 let lastCell = null, paintDirty = false;
+
 function cellOf(e) {
   const r = canvas.getBoundingClientRect();
   return [Math.floor((e.clientX - r.left) / r.width * N), Math.floor((e.clientY - r.top) / r.height * N)];
 }
+
+// square brush that wraps around the edges
 function stamp(cx, cy) {
   const rad = +$('brush').value, val = +tool;
   for (let dy = -rad; dy <= rad; dy++) for (let dx = -rad; dx <= rad; dx++) {
@@ -1173,7 +1551,8 @@ function stamp(cx, cy) {
     g[y * N + x] = val;
   }
 }
-// Bresenham between consecutive pointer positions, so fast strokes stay continuous.
+
+// Bresenham between consecutive pointer positions, so fast strokes stay continuous
 function strokeTo(c) {
   if (!lastCell) { stamp(c[0], c[1]); lastCell = c; return; }
   let [x0, y0] = lastCell; const [x1, y1] = c;
@@ -1188,39 +1567,64 @@ function strokeTo(c) {
   }
   lastCell = c;
 }
+
+// painting keeps the tick count but restarts outcome detection
 function afterPaint() {
   countCars(); resetDetection();
   if (meta) { meta.drawn = true; meta.dd = cars / M; }
-  dirty = true; paintDirty = true;
+  needsRender = true; paintDirty = true;
 }
-canvas.addEventListener('pointerdown', (e) => {
+
+function startPaint(e) {
   if (tool === 'none') return;
   painting = true; lastCell = null; canvas.setPointerCapture(e.pointerId);
   strokeTo(cellOf(e)); afterPaint(); e.preventDefault();
-});
-canvas.addEventListener('pointermove', (e) => {
+}
+
+function movePaint(e) {
   if (!painting) return;
   const evs = e.getCoalescedEvents ? e.getCoalescedEvents() : [];
   for (const ev of evs.length ? evs : [e]) strokeTo(cellOf(ev));
   afterPaint();
-});
-const endPaint = () => { if (painting) { painting = false; lastCell = null; updateReadout(); updateHint(); renderList(); } };
-canvas.addEventListener('pointerup', endPaint); canvas.addEventListener('pointercancel', endPaint);
+}
 
-/* ===================== saving files ===================== */
-let dlPromise = null;
+function endPaint() {
+  if (!painting) return;
+  painting = false; lastCell = null;
+  updateReadout(); updateHint(); renderList();
+}
+
+// tool: 'none' or the cell value to paint, as a string
+function setTool(v) {
+  tool = v;
+  for (const b of $('tools').querySelectorAll('button.pick')) b.setAttribute('aria-pressed', String(b.dataset.tool === v));
+  canvas.classList.toggle('painting', tool !== 'none');
+}
+
+
+// ── File export ─────────────────────────────────────────────
+let downloadsPromise = null;
+// resolves to the host's downloads capability, or null outside it
 function getDownloads() {
   if (!(window.claude && typeof window.claude.use === 'function')) return Promise.resolve(null);
-  if (!dlPromise) dlPromise = window.claude.use('downloads').catch(() => null);
-  return dlPromise;
+  if (!downloadsPromise) downloadsPromise = window.claude.use('downloads').catch(() => null);
+  return downloadsPromise;
 }
-function toast(msg) { const el = $('toast'); el.textContent = msg; el.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(() => { el.hidden = true; }, 3000); }
+
+let toastTimer = 0;
+function toast(msg) {
+  const el = $('toast');
+  el.textContent = msg; el.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { el.hidden = true; }, 3000);
+}
+
 function anchorSave(name, blob) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a'); a.href = url; a.download = name; a.rel = 'noopener';
   document.body.append(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 5000);
 }
+
 async function saveFile(name, blob) {
   const dl = await getDownloads();
   if (dl) {
@@ -1235,10 +1639,14 @@ async function saveFile(name, blob) {
   }
   anchorSave(name, blob);
 }
+
+// exports are about 512 px: small grids are scaled up by a whole factor, large ones sampled down
 function outGeometry() {
   if (N <= 512) { const up = Math.max(1, Math.floor(512 / N)); return { S: N * up, up, down: 1 }; }
   const down = Math.ceil(N / 512); return { S: Math.floor(N / down), up: 1, down };
 }
+
+// cell values double as palette indices
 function frameIndices(geo) {
   const { S, up, down } = geo, out = new Uint8Array(S * S);
   if (down > 1) { for (let oy = 0; oy < S; oy++) { const sr = oy * down * N, or = oy * S; for (let ox = 0; ox < S; ox++) out[or + ox] = g[sr + ox * down]; } }
@@ -1251,27 +1659,34 @@ function frameIndices(geo) {
   }
   return out;
 }
-$('png').addEventListener('click', () => {
+
+function savePng() {
   const geo = outGeometry(), idx = frameIndices(geo);
   const cv = document.createElement('canvas'); cv.width = geo.S; cv.height = geo.S;
   const cc = cv.getContext('2d'), im = cc.createImageData(geo.S, geo.S), p = new Uint32Array(im.data.buffer);
   for (let i = 0; i < idx.length; i++) p[i] = lut[idx[i]];
   cc.putImageData(im, 0, 0);
   cv.toBlob((blob) => { if (blob) saveFile('bml-' + N + '-tick' + tick + '.png', blob); }, 'image/png');
-});
+}
+
+const GIF_MAX_FRAMES = 900;
 let recording = false, gifChunks = [], gifFrames = 0, gifBytes = 0, gifGeo = null, gifEvery = 2, gifDelay = 4, gifBlob = null, gifUrl = null;
-const GIF_MAX = 900;
+
 function captureFrame(force) {
   if (!recording) return;
-  if (gifFrames >= GIF_MAX) { stopRecording(); return; }
-  const ch = gifFrame(frameIndices(gifGeo), gifGeo.S, gifGeo.S, gifDelay);
-  gifChunks.push(ch); gifFrames++; gifBytes += ch.length;
+  if (gifFrames >= GIF_MAX_FRAMES) { stopRecording(); return; }
+  const chunk = gifFrame(frameIndices(gifGeo), gifGeo.S, gifGeo.S, gifDelay);
+  gifChunks.push(chunk); gifFrames++; gifBytes += chunk.length;
   if (gifFrames % 10 === 0 || force) updateGifStatus();
 }
-const mb = (b) => (b / 1048576).toLocaleString(locale(), { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+const megabytes = (b) => (b / 1048576).toLocaleString(locale(), { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
 function updateGifStatus() {
-  $('gifStatus').textContent = recording ? t('gifRec', { n: fmt(gifFrames), mb: mb(gifBytes) }) : gifBlob ? t('gifDone', { n: fmt(gifFrames), mb: mb(gifBlob.size) }) : t('gifIdle');
+  $('gifStatus').textContent = recording ? t('gifRec', { n: fmt(gifFrames), mb: megabytes(gifBytes) })
+    : gifBlob ? t('gifDone', { n: fmt(gifFrames), mb: megabytes(gifBlob.size) }) : t('gifIdle');
 }
+
 function startRecording() {
   gifGeo = outGeometry(); gifEvery = +$('gifEvery').value; gifDelay = +$('gifFps').value;
   gifChunks = [gifHeader(gifGeo.S, gifGeo.S, paletteRGB())]; gifFrames = 0; gifBytes = gifChunks[0].length;
@@ -1281,6 +1696,7 @@ function startRecording() {
   captureFrame(true);
   if (!running) setRunning(true);
 }
+
 function stopRecording() {
   if (!recording) return;
   recording = false;
@@ -1293,56 +1709,55 @@ function stopRecording() {
   $('gifImg').src = gifUrl; $('gifOut').hidden = false;
   updateGifStatus();
 }
-$('rec').addEventListener('click', () => (recording ? stopRecording() : startRecording()));
-$('gifSave').addEventListener('click', () => { if (gifBlob) saveFile('bml-' + N + '.gif', gifBlob); });
 
-/* ===================== phase diagram ===================== */
-const workerSrc = [mulberry32, seedFrom, zh, fullHash, fillRandom, stepYellow, stepBlue, makeBrent, createSweep].map((f) => f.toString()).join('\n') +
+
+// ── Phase diagram ───────────────────────────────────────────
+const WORKER_SRC = [mulberry32, seedFrom, zh, fullHash, fillRandom, stepYellow, stepBlue, makeBrent, createSweep].map((f) => f.toString()).join('\n') +
   '\nonmessage = function (e) { var sw = createSweep(e.data); (function loop() { var ev = sw.run(80); for (var i = 0; i < ev.length; i++) postMessage(ev[i]); if (!sw.finished) setTimeout(loop, 0); })(); };\npostMessage({ type: "ready" });\n';
-let worker = null, mainSweep = null, sweeps = [], sweepColor = 0, cur = null, sweepT0 = 0, sweepMode = '', readyTimer = 0, workerReady = false;
-function sweepGroups(s) {
+const MAX_SWEEPS = 6;
+
+let worker = null, workerReady = false, readyTimer = 0, mainSweep = null, sweepMode = '';
+let sweeps = [], nextSweepColor = 0, activeSweep = null, sweepT0 = 0, lastPhaseDraw = 0;
+
+function sweepMeans(s) {
   const by = new Map();
   for (const p of s.points) { const a = by.get(p.d) || []; a.push(p.v); by.set(p.d, a); }
   const ds = [...by.keys()].sort((a, b) => a - b);
   return ds.map((d) => ({ d, m: by.get(d).reduce((x, y) => x + y, 0) / by.get(d).length }));
 }
+
+// density where the mean first drops below 50%, linearly interpolated
 function sweepTransition(s) {
-  const gs = sweepGroups(s);
-  for (let i = 1; i < gs.length; i++) if (gs[i - 1].m >= 0.5 && gs[i].m < 0.5) {
-    const k = (gs[i - 1].m - 0.5) / (gs[i - 1].m - gs[i].m);
-    return gs[i - 1].d + k * (gs[i].d - gs[i - 1].d);
+  const means = sweepMeans(s);
+  for (let i = 1; i < means.length; i++) if (means[i - 1].m >= 0.5 && means[i].m < 0.5) {
+    const k = (means[i - 1].m - 0.5) / (means[i - 1].m - means[i].m);
+    return means[i - 1].d + k * (means[i].d - means[i - 1].d);
   }
   return null;
 }
+
 function drawPhase() {
-  const cv = $('phase'); if (!cv) return;
-  const { c, W, H: Hh, P, fs } = prepCanvas(cv);
-  const tk = tokens();
-  const L = Math.ceil(c.measureText('100%').width) + P * 5, R = P * 4, T = P * 4, B = fs + P * 6;
-  const cols = Math.max(2, Math.floor((W - L - R) / P)), rows = Math.max(2, Math.floor((Hh - T - B) / P));
+  const f = chartFrame($('phase')), theme = themeColors();
+  const { c, P, L, T, cols, rows } = f;
   let lo = 1, hi = 0;
   for (const s of sweeps) { lo = Math.min(lo, s.from); hi = Math.max(hi, s.to); }
   if (hi <= lo) { lo = (+$('pFrom').value || 20) / 100; hi = (+$('pTo').value || 45) / 100; }
   if (hi <= lo) hi = lo + 0.01;
   const xOf = (d) => Math.round(((d - lo) / (hi - lo)) * (cols - 1));
   const rowOf = (v) => Math.round((rows - 1) * (1 - v));
-  axes(c, L, T, cols, rows, P, fs, tk, ['0%', '25%', '50%', '75%', '100%']);
-  c.textAlign = 'center'; c.textBaseline = 'top'; c.fillStyle = css(tk.muted);
+  drawAxes(f, theme);
   const st = niceStep((hi - lo) * 100, 6) / 100;
-  let lastX = -1e9;
+  const marks = [];
   for (let d = Math.ceil(lo / st - 1e-9) * st; d <= hi + 1e-9; d += st) {
-    const x = L + xOf(d) * P;
-    c.fillRect(x, T + rows * P + P, P, P * 2);
-    const lbl = (d * 100).toLocaleString(locale(), { maximumFractionDigits: st < 0.01 ? 1 : 0 }) + '%', w = c.measureText(lbl).width;
-    const cx = Math.min(Math.max(x, L + w / 2), L + cols * P - w / 2);
-    if (cx - w / 2 > lastX + fs) { c.fillText(lbl, Math.round(cx), T + rows * P + P * 4); lastX = cx + w / 2; }
+    marks.push([L + xOf(d) * P, (d * 100).toLocaleString(locale(), { maximumFractionDigits: st < 0.01 ? 1 : 0 }) + '%']);
   }
+  drawXTicks(f, theme, marks);
   for (const s of sweeps) {
     if (!s.on) continue;
-    const gs = sweepGroups(s);
-    if (gs.length > 1) {
-      const pts = gs.map((q) => [xOf(q.d), q.m]);
-      plotSeries(c, L, T, rows, P, s.color, (x) => {
+    const means = sweepMeans(s);
+    if (means.length > 1) {
+      const pts = means.map((q) => [xOf(q.d), q.m]);
+      plotSeries(f, s.color, (x) => {
         for (let i = 1; i < pts.length; i++) if (x >= pts[i - 1][0] && x <= pts[i][0]) {
           const span = pts[i][0] - pts[i - 1][0]; const k = span ? (x - pts[i - 1][0]) / span : 0;
           return pts[i - 1][1] + k * (pts[i][1] - pts[i - 1][1]);
@@ -1354,57 +1769,69 @@ function drawPhase() {
     for (const p of s.points) c.fillRect(L + xOf(p.d) * P - P, T + rowOf(p.v) * P - P, P * 3, P * 3);
   }
   $('phaseEmpty').hidden = sweeps.some((s) => s.points.length);
-  placeEmpty('phaseEmpty', L, R, T, rows, P);
+  placeEmpty($('phaseEmpty'), f);
 }
+
 function renderSweeps() {
   const ul = $('sweepList'); ul.textContent = '';
   for (let i = sweeps.length - 1; i >= 0; i--) {
-    const s = sweeps[i], li = document.createElement('li');
-    if (!s.on) li.className = 'off';
-    const sw = document.createElement('span'); sw.className = 'sw'; sw.style.background = s.color;
-    const nm = document.createElement('span'); nm.className = 'name';
-    nm.textContent = s.N + 'x' + s.N + ' | ' + pct(s.from) + '–' + pct(s.to) + ' | ' + t('starts', { n: s.runs }) + ' | ' + t('upTo', { t: shortNum(s.maxTicks) });
-    const cnt = { free: 0, jam: 0, mixed: 0, loop: 0 }; for (const p of s.points) cnt[p.outcome]++;
+    const s = sweeps[i];
+    const name = s.N + 'x' + s.N + ' | ' + pct(s.from) + '–' + pct(s.to) + ' | ' + t('starts', { n: s.runs }) + ' | ' + t('upTo', { t: shortNum(s.maxTicks) });
+    const counts = { free: 0, jam: 0, mixed: 0, loop: 0 };
+    for (const p of s.points) counts[p.outcome]++;
     const tr = sweepTransition(s);
-    const rs = document.createElement('span'); rs.className = 'res';
-    rs.textContent = (tr ? t('sweepTr', { d: pct(tr) }) : '') + t('sweepRes', cnt);
-    const b = document.createElement('button'); b.type = 'button'; b.textContent = t(s.on ? 'hide' : 'show');
-    b.addEventListener('click', () => { s.on = !s.on; renderSweeps(); drawPhase(); });
-    li.append(sw, nm, rs, b); ul.append(li);
+    const res = (tr ? t('sweepTr', { d: pct(tr) }) : '') + t('sweepRes', counts);
+    ul.append(listRow(s.color, name, res, s, () => { renderSweeps(); drawPhase(); }));
   }
 }
-let lastPhaseDraw = 0;
+
 function handleSweepEvents(evs) {
   for (const m of evs) {
     if (m.type === 'ready') { workerReady = true; clearTimeout(readyTimer); continue; }
     if (m.type === 'point') {
-      cur.points.push(m);
+      activeSweep.points.push(m);
       $('pBar').style.width = (m.done / m.total * 100) + '%';
       $('pStatus').textContent = t('pProg', { done: m.done, total: m.total, d: pct(m.d), s: Math.round((performance.now() - sweepT0) / 1000) }) + (sweepMode === 'main' ? t('pMain') : '');
     } else if (m.type === 'done') {
-      const tr = sweepTransition(cur), secs = ((performance.now() - sweepT0) / 1000).toLocaleString(locale(), { maximumFractionDigits: 1 });
-      const msg = t('pDone', { s: secs }) + (tr ? t('pTr', { d: pct(tr) }) : '');
-      stopSweep(msg);
+      const tr = sweepTransition(activeSweep), secs = ((performance.now() - sweepT0) / 1000).toLocaleString(locale(), { maximumFractionDigits: 1 });
+      stopSweep(t('pDone', { s: secs }) + (tr ? t('pTr', { d: pct(tr) }) : ''));
     }
   }
   const now = performance.now();
-  if (now - lastPhaseDraw > 150 || !cur) { drawPhase(); renderSweeps(); lastPhaseDraw = now; }
+  if (now - lastPhaseDraw > 150 || !activeSweep) { drawPhase(); renderSweeps(); lastPhaseDraw = now; }
 }
+
 function stopSweep(msg) {
   clearTimeout(readyTimer);
   if (worker) { worker.terminate(); worker = null; }
-  mainSweep = null; cur = null;
+  mainSweep = null; activeSweep = null;
   $('phaseRun').textContent = t('phaseRun');
   if (msg) $('pStatus').textContent = msg;
   drawPhase(); renderSweeps();
 }
+
+// frame() advances mainSweep in time slices
 function runOnMainThread(job) {
   if (worker) { worker.terminate(); worker = null; }
   sweepMode = 'main';
   mainSweep = createSweep(job);
 }
-$('phaseRun').addEventListener('click', () => {
-  if (worker || mainSweep) { stopSweep(t('pStopped')); return; }
+
+// falls back to the main thread if the worker cannot start, errors, or stays silent for 1.5 s
+function startWorker(job) {
+  try {
+    const url = URL.createObjectURL(new Blob([WORKER_SRC], { type: 'text/javascript' }));
+    workerReady = false;
+    worker = new Worker(url);
+    sweepMode = 'worker';
+    worker.onmessage = (e) => { if (e.data && e.data.type === 'ready') URL.revokeObjectURL(url); if (activeSweep) handleSweepEvents([e.data]); };
+    worker.onerror = (e) => { e.preventDefault && e.preventDefault(); if (activeSweep) runOnMainThread(job); };
+    worker.postMessage(job);
+    readyTimer = setTimeout(() => { if (activeSweep && !workerReady && worker) runOnMainThread(job); }, 1500);
+  } catch (err) { runOnMainThread(job); }
+}
+
+function startSweep() {
   const pN = +$('pN').value, from = +$('pFrom').value, to = +$('pTo').value, step = +$('pStep').value;
   const runs = Math.max(1, Math.min(50, Math.round(+$('pRuns').value || 1)));
   const maxTicks = Math.max(100, Math.min(2000000, Math.round(+$('pMax').value || 20000)));
@@ -1412,154 +1839,135 @@ $('phaseRun').addEventListener('click', () => {
   const dens = [];
   for (let d = from; d <= to + 1e-9; d += step) dens.push(Math.round(d * 1000) / 100000);
   if (dens.length * runs > 2000) { $('pStatus').textContent = t('pTooMany', { n: dens.length * runs }); return; }
-  cur = { N: pN, from: from / 100, to: to / 100, runs, maxTicks, points: [], color: HIST[sweepColor++ % HIST.length], on: true };
-  sweeps.push(cur); if (sweeps.length > 6) sweeps.shift();
+  activeSweep = { N: pN, from: from / 100, to: to / 100, runs, maxTicks, points: [], color: SERIES_COLORS[nextSweepColor++ % SERIES_COLORS.length], on: true };
+  sweeps.push(activeSweep); if (sweeps.length > MAX_SWEEPS) sweeps.shift();
   const job = { N: pN, dens, runs, maxTicks, base: 'sweep' + Date.now() };
   sweepT0 = performance.now();
   $('pBar').style.width = '0'; $('phaseRun').textContent = t('phaseStop');
   $('pStatus').textContent = t('pProg', { done: 0, total: dens.length * runs, d: pct(dens[0]), s: 0 });
-  try {
-    const url = URL.createObjectURL(new Blob([workerSrc], { type: 'text/javascript' }));
-    workerReady = false;
-    worker = new Worker(url);
-    sweepMode = 'worker';
-    worker.onmessage = (e) => { if (e.data && e.data.type === 'ready') URL.revokeObjectURL(url); if (cur) handleSweepEvents([e.data]); };
-    worker.onerror = (e) => { e.preventDefault && e.preventDefault(); if (cur) runOnMainThread(job); };
-    worker.postMessage(job);
-    readyTimer = setTimeout(() => { if (cur && !workerReady && worker) runOnMainThread(job); }, 1500);
-  } catch (err) { runOnMainThread(job); }
+  startWorker(job);
   renderSweeps(); drawPhase();
-});
-$('phaseClear').addEventListener('click', () => { if (worker || mainSweep) stopSweep(); sweeps = []; $('pBar').style.width = '0'; $('pStatus').textContent = t('pIdle'); drawPhase(); renderSweeps(); });
-$('phaseCsv').addEventListener('click', () => {
+}
+
+function clearSweeps() {
+  if (worker || mainSweep) stopSweep();
+  sweeps = []; $('pBar').style.width = '0'; $('pStatus').textContent = t('pIdle');
+  drawPhase(); renderSweeps();
+}
+
+function exportCsv() {
   if (!sweeps.some((s) => s.points.length)) { toast(t('tSweepFirst')); return; }
   const rows = ['series,N,density,start,velocity,outcome,ticks,final_tick,period'];
   sweeps.forEach((s, i) => s.points.forEach((p) => rows.push([i + 1, s.N, p.d, p.r + 1, p.v.toFixed(4), p.outcome, p.ticks, p.fin, p.period].join(','))));
   saveFile('bml-phase.csv', new Blob([rows.join('\n')], { type: 'text/csv' }));
-});
-
-/* ===================== language ===================== */
-function applyLang() {
-  document.documentElement.lang = lang;
-  for (const el of document.querySelectorAll('[data-i]')) {
-    const k = el.dataset.i;
-    if (k === 'brand') el.innerHTML = t('brand'); else el.textContent = t(k);
-  }
-  for (const el of document.querySelectorAll('[data-i-label]')) el.label = t(el.dataset.iLabel);
-  for (const el of document.querySelectorAll('[data-i-aria]')) el.setAttribute('aria-label', t(el.dataset.iAria));
-  for (const b of document.querySelectorAll('[data-lang]')) b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
-  for (const el of document.querySelectorAll('[data-i-title]')) el.title = t(el.dataset.iTitle);
-  $('play').textContent = t(running ? 'pause' : 'play');
-  $('rec').textContent = t(recording ? 'recStop' : 'rec');
-  if (worker || mainSweep) $('phaseRun').textContent = t('phaseStop');
-  if (!sweeps.length) $('pStatus').textContent = t('pIdle');
-  $('densityOut').textContent = pct(+$('density').value / 100);
-  shareText();
-  brushLabel(); updateGifStatus(); updateHint(); colorWarnings(); updateReadout(); renderList(); renderSweeps(); drawChart(); drawPhase();
 }
+
+
+// ── Controls & event wiring ─────────────────────────────────
+function setSize(n) { N = n; M = N * N; g = new Uint8Array(M); brent = makeBrent(M); setupCanvas(); place(); }
+
+function densityLabel() { $('densityOut').textContent = pct(+$('density').value / 100); }
+function shareLabel() { const v = +$('share').value; $('shareOut').textContent = v + ' : ' + (100 - v); }
+function brushLabel() { const r = +$('brush').value; $('brushOut').textContent = r ? (2 * r + 1) + 'x' + (2 * r + 1) : '1'; }
+
+function setScale(log) {
+  scaleLog = log;
+  $('scaleLog').setAttribute('aria-pressed', String(log)); $('scaleLin').setAttribute('aria-pressed', String(!log));
+  drawChart();
+}
+
+// while a slider is dragged, only its first step archives the previous run; later steps replace it
+let sliding = false;
+function slide() { place(sliding); sliding = true; }
+
+$('size').addEventListener('change', () => setSize(+$('size').value));
+$('seed').addEventListener('change', place);
+$('newSeed').addEventListener('click', () => { $('seed').value = String(Math.floor(Math.random() * 900000) + 100000); place(); });
+$('zoom').addEventListener('input', () => { $('zoomOut').textContent = $('zoom').value + '%'; fitCanvas(); });
+
+$('template').addEventListener('change', () => place());
+$('density').addEventListener('input', () => { densityLabel(); slide(); });
+$('share').addEventListener('input', () => { shareLabel(); slide(); });
+$('cell').addEventListener('input', () => { $('cellOut').textContent = $('cell').value; slide(); });
+for (const id of ['density', 'share', 'cell']) $(id).addEventListener('change', () => { sliding = false; });
+$('presets').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; $('density').value = b.dataset.d; densityLabel(); place(); });
+$('extra').addEventListener('change', () => place());
+$('reset').addEventListener('click', place);
+
+$('play').addEventListener('click', () => setRunning(!running));
+$('step').addEventListener('pointerdown', (e) => { if (e.button !== 0) return; e.preventDefault(); try { $('step').setPointerCapture(e.pointerId); } catch (err) {} beginHold(); });
+for (const type of ['pointerup', 'pointercancel', 'lostpointercapture']) $('step').addEventListener(type, endHold);
+// pointer clicks already stepped on pointerdown; detail 0 means keyboard activation
+$('step').addEventListener('click', (e) => { if (e.detail === 0) singleStep(); });
+$('help').addEventListener('click', () => {
+  const about = $('about');
+  about.hidden = !about.hidden; $('help').setAttribute('aria-expanded', String(!about.hidden));
+  if (!about.hidden) about.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
+});
 for (const b of document.querySelectorAll('[data-lang]')) b.addEventListener('click', () => {
   lang = b.dataset.lang;
   try { localStorage.setItem('bml.lang', lang); } catch (e) {}
   applyLang();
 });
 
-/* ===================== controls ===================== */
-function setSize(n) { N = n; M = N * N; g = new Uint8Array(M); brent = makeBrent(M); setupCanvas(); place(); }
-function brushLabel() { const r = +$('brush').value; $('brushOut').textContent = r ? (2 * r + 1) + 'x' + (2 * r + 1) : '1'; }
-$('size').addEventListener('change', () => setSize(+$('size').value));
-$('template').addEventListener('change', () => place());
-// While a slider is being dragged, only the first step archives the previous run; later steps replace the in-progress one.
-let sliding = false;
-function slide() { place(sliding); sliding = true; }
-for (const id of ['density', 'share']) $(id).addEventListener('change', () => { sliding = false; });
-$('extra').addEventListener('change', () => place());
-$('zoom').addEventListener('input', () => { $('zoomOut').textContent = $('zoom').value + '%'; fitCanvas(); });
-$('cell').addEventListener('input', () => { $('cellOut').textContent = $('cell').value; slide(); });
-$('cell').addEventListener('change', () => { sliding = false; });
-$('density').addEventListener('input', () => { $('densityOut').textContent = pct(+$('density').value / 100); slide(); });
-$('share').addEventListener('input', () => { shareText(); slide(); });
-$('seed').addEventListener('change', place);
-$('newSeed').addEventListener('click', () => { $('seed').value = String(Math.floor(Math.random() * 900000) + 100000); place(); });
-$('reset').addEventListener('click', place);
-$('presets').addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; $('density').value = b.dataset.d; $('densityOut').textContent = pct(+b.dataset.d / 100); place(); });
-$('play').addEventListener('click', () => setRunning(!running));
-let hold = null;
-function singleStep() { setRunning(false); tickOnce(); settledStop(); updateReadout(); updateCurRow(); drawChart(); }
-function beginHold() { singleStep(); hold = { t0: performance.now(), acc: 0 }; }
-function endHold() { hold = null; }
-$('step').addEventListener('pointerdown', (e) => { if (e.button !== 0) return; e.preventDefault(); try { $('step').setPointerCapture(e.pointerId); } catch (err) {} beginHold(); });
-for (const ev of ['pointerup', 'pointercancel', 'lostpointercapture']) $('step').addEventListener(ev, endHold);
-$('step').addEventListener('click', (e) => { if (e.detail === 0) singleStep(); });
-document.addEventListener('keyup', (e) => { if (e.code === 'ArrowRight') endHold(); });
-window.addEventListener('blur', endHold);
-$('help').addEventListener('click', () => {
-  const a = $('about'); a.hidden = !a.hidden; $('help').setAttribute('aria-expanded', String(!a.hidden));
-  if (!a.hidden) a.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'nearest' });
-});
-function setTool(v) {
-  tool = v;
-  for (const x of $('tools').querySelectorAll('button.pick')) x.setAttribute('aria-pressed', String(x.dataset.tool === v));
-  canvas.classList.toggle('painting', tool !== 'none');
-}
 $('tools').addEventListener('click', (e) => {
   const b = e.target.closest('button.pick'); if (!b) return;
   setTool(tool === b.dataset.tool ? 'none' : b.dataset.tool);
 });
 $('brush').addEventListener('input', brushLabel);
-for (const id of ['cY', 'cB', 'cBg']) $(id).addEventListener('input', () => {
-  colors = { y: hexToRgb($('cY').value), b: hexToRgb($('cB').value), bg: hexToRgb($('cBg').value) }; buildLut();
-});
+for (const id of ['cY', 'cB', 'cBg']) $(id).addEventListener('input', () => { colors = readColors(); buildLut(); });
 $('fixColors').addEventListener('click', fixColors);
+$('resetColors').addEventListener('click', resetColors);
 $('stuck').addEventListener('change', buildLut);
-$('scaleLin').addEventListener('click', () => { scaleLog = false; $('scaleLin').setAttribute('aria-pressed', 'true'); $('scaleLog').setAttribute('aria-pressed', 'false'); drawChart(); });
-$('scaleLog').addEventListener('click', () => { scaleLog = true; $('scaleLog').setAttribute('aria-pressed', 'true'); $('scaleLin').setAttribute('aria-pressed', 'false'); drawChart(); });
-$('clearHist').addEventListener('click', () => { history = []; renderList(); drawChart(); });
+canvas.addEventListener('pointerdown', startPaint);
+canvas.addEventListener('pointermove', movePaint);
+canvas.addEventListener('pointerup', endPaint);
+canvas.addEventListener('pointercancel', endPaint);
+
+$('png').addEventListener('click', savePng);
+$('rec').addEventListener('click', () => (recording ? stopRecording() : startRecording()));
+$('gifSave').addEventListener('click', () => { if (gifBlob) saveFile('bml-' + N + '.gif', gifBlob); });
+
+$('scaleLin').addEventListener('click', () => setScale(false));
+$('scaleLog').addEventListener('click', () => setScale(true));
+$('clearHist').addEventListener('click', () => { pastRuns = []; renderList(); drawChart(); });
+$('phaseRun').addEventListener('click', () => { if (worker || mainSweep) stopSweep(t('pStopped')); else startSweep(); });
+$('phaseClear').addEventListener('click', clearSweeps);
+$('phaseCsv').addEventListener('click', exportCsv);
+
 document.addEventListener('keydown', (e) => {
   const tag = (e.target.tagName || '').toLowerCase();
-  if (tag === 'input' || tag === 'select' || tag === 'textarea' || tag === 'button' && e.code === 'Space' || e.metaKey || e.ctrlKey || e.altKey) return;
+  if (tag === 'input' || tag === 'select' || tag === 'textarea' || (tag === 'button' && e.code === 'Space') || e.metaKey || e.ctrlKey || e.altKey) return;
   if (e.code === 'Space') { e.preventDefault(); setRunning(!running); }
   else if (e.code === 'ArrowRight') { e.preventDefault(); if (!e.repeat) beginHold(); }
   else if (e.code === 'KeyR') place();
   else if (e.code === 'Escape') setTool('none');
 });
-const mq = window.matchMedia('(prefers-color-scheme: dark)');
-(mq.addEventListener ? mq.addEventListener('change', applyAccents) : mq.addListener(applyAccents));
+document.addEventListener('keyup', (e) => { if (e.code === 'ArrowRight') endHold(); });
+window.addEventListener('blur', endHold);
+
+// accent contrast depends on the page background; on a scheme change, wait a frame so the new tokens apply
+const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const onSchemeChange = () => requestAnimationFrame(applyAccents);
+if (darkQuery.addEventListener) darkQuery.addEventListener('change', onSchemeChange); else darkQuery.addListener(onSchemeChange);
 new MutationObserver(applyAccents).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
-/* ===================== loop ===================== */
-let lastReadout = 0, lastChart = 0;
-function frame(now) {
-  if (running) {
-    const sp = $('speed').value;
-    if (sp === 'turbo') { const t0 = performance.now(); do { tickOnce(); if (settledStop()) break; } while (performance.now() - t0 < 14); }
-    else { acc += +sp; while (acc >= 1) { acc -= 1; tickOnce(); if (settledStop()) { acc = 0; break; } } }
-  }
-  if (hold && !running) {
-    // Holding Step ramps up to half the play speed over about a second.
-    const held = now - hold.t0;
-    if (held > 300) {
-      const k = Math.min(1, (held - 300) / 900), sp = $('speed').value;
-      if (sp === 'turbo') { const t0 = performance.now(), budget = 0.5 + 6.5 * k; do { tickOnce(); if (settledStop()) { hold = null; break; } } while (performance.now() - t0 < budget); }
-      else { hold.acc += (+sp / 2) * (0.1 + 0.9 * k); while (hold && hold.acc >= 1) { hold.acc -= 1; tickOnce(); if (settledStop()) hold = null; } }
-    }
-  }
-  if (mainSweep) { handleSweepEvents(mainSweep.run(running ? 6 : 12)); }
-  if (paintDirty) { paintDirty = false; updateReadout(); updateHint(); const r = $('curRow'); if (r && meta) r.querySelector('.name').textContent = t('now') + ': ' + metaLabel(meta); }
-  if (dirty) render();
-  if (running || hold || now - lastReadout > 250) { updateReadout(); lastReadout = now; }
-  if (now - lastChart > (running || hold ? 200 : 700)) { drawChart(); updateCurRow(); lastChart = now; }
-  requestAnimationFrame(frame);
-}
-let resizeT = 0;
-new ResizeObserver(() => { cancelAnimationFrame(resizeT); resizeT = requestAnimationFrame(() => { fitCanvas(); drawChart(); drawPhase(); }); }).observe(document.querySelector('.stage'));
+let resizeFrame = 0;
+new ResizeObserver(() => {
+  cancelAnimationFrame(resizeFrame);
+  resizeFrame = requestAnimationFrame(() => { fitCanvas(); drawChart(); drawPhase(); });
+}).observe(document.querySelector('.stage'));
 window.addEventListener('resize', fitCanvas);
-if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { drawChart(); drawPhase(); });
 
-colors = { y: hexToRgb($('cY').value), b: hexToRgb($('cB').value), bg: hexToRgb($('cBg').value) };
+
+// ── Init ────────────────────────────────────────────────────
+colors = readColors();
 setupCanvas();
 buildLut();
 place();
 applyLang();
+// charts measure text, so redraw once the embedded font is ready
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { drawChart(); drawPhase(); });
 requestAnimationFrame(frame);
 </script>
 </body>

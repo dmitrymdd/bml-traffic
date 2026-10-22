@@ -2,9 +2,9 @@
 
 An interactive simulator of the Biham–Middleton–Levine traffic model, in a single HTML file with no dependencies.
 
-![30% density on a 128×128 grid, seed 1: jams form, dissolve, and the traffic sorts itself into diagonal stripes](bml-demo.gif)
+![Four patterns running side by side: random start, packed block, checkerboard and crossroads](bml-demo.gif)
 
-**[Live demo →](https://YOUR-USERNAME.github.io/bml-traffic/)**
+**[Live demo →](https://dmitrymdd.github.io/bml-traffic/)**
 
 ## The model
 
@@ -48,4 +48,4 @@ Open `index.html` in a browser. To host it, upload `index.html` to any static ho
 
 MIT, see [LICENSE](LICENSE).
 
-The embedded pixel font is a subset of [Pixar One](https://shishkin.ru/pixar) by Vasily Shishkin (c) 2025, which its author distributes as free for personal and commercial use. It is not under the MIT license that covers the code.
+The font is Pixar One © Vasily Shishkin, 2012 ([shishkin.ru](https://shishkin.ru)). It is used under the author's licence, free for personal and commercial use, and is not covered by the MIT License.
