@@ -15,27 +15,22 @@ At low density the cars sort themselves into diagonal stripes and never block ea
 ## Features
 
 - Grids from 32×32 to 1024×1024, plus multiples of 3 for the exact 2/3 pattern
-- Seeded random starts, so any run can be reproduced
-- Patterns: perfect flow at 66%, perfect flow plus one car, a staircase that never moves, a jam seed
-- Paint and erase cars with the mouse: click a car color to pick it as the brush
+- Seeded random starts
+- Patterns - choose one of the scenarios
+- Paint and erase cars with the mouse, creating your own pattern
 - Step one tick at a time, or hold Step (or →) to fast-forward
-- Exact outcome detection: free flow, gridlock, or a loop where the same grid repeats forever
+- Exact outcome detection - free flow, gridlock, or a loop
 - A chart of moving cars per tick, with past runs kept for comparison
-- Phase diagram: a sweep over densities that runs in a Web Worker
+- Phase diagram - a sweep over densities that runs in a Web Worker
 - Export as PNG, animated GIF (with a built-in encoder) or CSV
 - Car colors are customizable, and the interface accents follow them
-- No dependencies: the pixel font (Pixar One) is embedded as a 13 KB subset
-- English and Russian
+- Both in English and Russian
 
 ## How outcomes are detected
 
 - **Free flow**: every car moved for N ticks in a row. Each car is then back where it started, so the grid repeats forever.
 - **Gridlock**: no car moved in a tick.
 - **Loop**: the exact grid came back. Each grid state is hashed with Zobrist-style keys, updated incrementally as cars move, and Brent's algorithm finds the repeat while storing only one checkpoint. A matching hash is confirmed cell by cell.
-
-## Running it
-
-Open `index.html` in a browser. To host it, upload `index.html` to any static host, such as GitHub Pages.
 
 ## References
 
