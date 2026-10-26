@@ -7,6 +7,7 @@
 <title>BML Traffic</title>
 <meta name="description" content="Biham–Middleton–Levine traffic model: an interactive cellular automaton simulator.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 3' shape-rendering='crispEdges'%3E%3Crect width='3' height='3' fill='%23101214'/%3E%3Cpath fill='%234aa8c9' d='M0 0h1v1H0zM2 1h1v1H2zM1 2h1v1H1z'/%3E%3Cpath fill='%23e18147' d='M1 0h1v1H1zM0 1h1v1H0zM2 2h1v1H2z'/%3E%3C/svg%3E">
+<script>try { const th = localStorage.getItem('bml.theme'); if (th === 'light' || th === 'dark') document.documentElement.dataset.theme = th; } catch (e) {}</script>
 <style>
 /* Pixar One © 2012 Vasily Shishkin, free for personal and commercial use, https://shishkin.ru. Subset: Latin, Cyrillic. */
 @font-face { font-family: "Pixar One"; font-weight: 400; src: url(data:font/woff2;base64,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) format("woff2"); font-display: block; }
@@ -161,9 +162,11 @@ input[type="range"]::-moz-range-thumb { width: 10px; height: 20px; background: v
 /* ── Header ─────────────────────────────────────────────── */
 .brand { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
 h1 .acc { color: var(--y-line); }
-.bar { display: flex; gap: 6px; }
+.bar { display: flex; flex-wrap: wrap; gap: 6px; }
 .bar .grow { flex: 1 1 0; }
 .bar .seg { flex: none; }
+.bar .icon { flex: none; padding-inline: 6px; }
+.icon svg { display: block; width: 14px; height: 14px; }
 .gauges { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .gauge { display: grid; gap: 4px; min-width: 0; }
 .big { font-size: 28px; letter-spacing: 0.02em; line-height: 32px; white-space: nowrap; overflow: hidden; font-variant-numeric: tabular-nums; }
@@ -269,6 +272,11 @@ canvas.chart { display: block; width: 100%; }
   .stat:nth-child(3) { border-left: 0; }
   .stat:nth-child(n+3) { border-top: 3px solid var(--line); }
 }
+@media (max-width: 400px) {
+  .bar { gap: 4px; }
+  .bar button, .bar .seg button { padding-inline: 5px; }
+  .bar .icon { padding-inline: 4px; }
+}
 @media (max-width: 560px) {
   .list li { grid-template-columns: 14px minmax(0, 1fr) auto; }
   .list .res { grid-column: 2 / 4; text-align: left; }
@@ -287,6 +295,10 @@ canvas.chart { display: block; width: 100%; }
         <button id="play" class="acc-y grow" type="button" data-i="play">Play</button>
         <button id="step" type="button" data-i="step" data-i-title="stepTip" title="Hold to fast-forward">Step</button>
         <button id="help" type="button" aria-expanded="false" data-i-aria="help" aria-label="About">?</button>
+        <button id="theme" class="icon" type="button" aria-label="Dark theme" title="Dark theme">
+          <svg class="i-moon" viewBox="0 0 7 7" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 0h2v1H2zM1 1h2v1H1zM0 2h2v3H0zM6 4h1v1H6zM1 5h5v1H1zM2 6h3v1H2z"/></svg>
+          <svg class="i-sun" viewBox="0 0 7 7" shape-rendering="crispEdges" aria-hidden="true" hidden><path fill="currentColor" d="M2 2h3v3H2zM3 0h1v1H3zM3 6h1v1H3zM0 3h1v1H0zM6 3h1v1H6zM1 1h1v1H1zM5 1h1v1H5zM1 5h1v1H1zM5 5h1v1H5z"/></svg>
+        </button>
         <div class="seg" role="group" data-i-aria="language" aria-label="Language">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
           <button type="button" data-lang="ru" aria-pressed="false">RU</button>
@@ -876,7 +888,7 @@ function gifFrame(indices, W, H, delay) {
 const I18N = {
   en: {
     brand: '<span class="acc">BML</span> Traffic', by: 'by dmitry.mdd', play: 'Play', pause: 'Pause', step: 'Step',
-    stepTip: 'Hold to fast-forward', help: 'About the model', language: 'Language', tick: 'Tick', moving: 'Moving', settings: 'Settings',
+    stepTip: 'Hold to fast-forward', help: 'About the model', toDark: 'Dark theme', toLight: 'Light theme', language: 'Language', tick: 'Tick', moving: 'Moving', settings: 'Settings',
     gGrid: 'Grid', size: 'Size', pow2: 'Powers of two', mult3: 'Multiples of 3, exact 2/3', seed: 'Seed', newSeed: 'New', zoom: 'Zoom',
     gLayout: 'Layout', pattern: 'Pattern', tpl_random: 'Random', tpl_perfect: 'Perfect flow', tpl_defect: 'Perfect + extra',
     tpl_worst: 'Staircase', tpl_seedjam: 'Jam seed', tpl_block: 'Packed block', tpl_clusters: 'Two crowds', tpl_cross: 'Crossroads',
@@ -935,7 +947,7 @@ const I18N = {
   },
   ru: {
     brand: '<span class="acc">BML</span> Пробки', by: 'от dmitry.mdd', play: 'Пуск', pause: 'Пауза', step: 'Шаг',
-    stepTip: 'Зажмите, чтобы промотать', help: 'О модели', language: 'Язык', tick: 'Такт', moving: 'Едут', settings: 'Настройки',
+    stepTip: 'Зажмите, чтобы промотать', help: 'О модели', toDark: 'Тёмная тема', toLight: 'Светлая тема', language: 'Язык', tick: 'Такт', moving: 'Едут', settings: 'Настройки',
     gGrid: 'Поле', size: 'Размер', pow2: 'Степени двойки', mult3: 'Кратные 3', seed: 'Сид', newSeed: 'Новый', zoom: 'Масштаб',
     gLayout: 'Расстановка', pattern: 'Шаблон', tpl_random: 'Случайно', tpl_perfect: 'Идеальный поток', tpl_defect: 'Идеальный + лишние',
     tpl_worst: 'Лесенка', tpl_seedjam: 'Затор в центре', tpl_block: 'Плотный блок', tpl_clusters: 'Две толпы', tpl_cross: 'Перекрёсток',
@@ -1040,6 +1052,17 @@ function setLinkedText(el, text) {
   el.append(text.slice(last));
 }
 
+const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
+const isDark = () => (document.documentElement.dataset.theme || (darkQuery.matches ? 'dark' : 'light')) === 'dark';
+
+// the button shows the theme it switches to
+function themeLabel() {
+  const b = $('theme'), dark = isDark(), label = t(dark ? 'toLight' : 'toDark');
+  b.querySelector('.i-moon').toggleAttribute('hidden', dark);
+  b.querySelector('.i-sun').toggleAttribute('hidden', !dark);
+  b.setAttribute('aria-label', label); b.title = label;
+}
+
 function applyLang() {
   document.documentElement.lang = lang;
   for (const el of document.querySelectorAll('[data-i]')) {
@@ -1052,6 +1075,7 @@ function applyLang() {
   for (const el of document.querySelectorAll('[data-i-alt]')) el.alt = t(el.dataset.iAlt);
   for (const el of document.querySelectorAll('[data-i-links]')) setLinkedText(el, t(el.dataset.iLinks));
   for (const b of document.querySelectorAll('[data-lang]')) b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
+  themeLabel();
   $('play').textContent = t(running ? 'pause' : 'play');
   $('rec').textContent = t(recording ? 'recStop' : 'rec');
   if (worker || mainSweep) $('phaseRun').textContent = t('phaseStop');
@@ -1111,6 +1135,17 @@ function parseCss(v) {
 
 function themeColor(name) { return parseCss(getComputedStyle(document.documentElement).getPropertyValue(name)); }
 
+// stock field colour per theme; a field the user recoloured is left alone
+const FIELD = { light: '#f5f3ee', dark: '#101214' };
+const fieldDefault = () => FIELD[isDark() ? 'dark' : 'light'];
+
+function syncField() {
+  const v = $('cBg').value;
+  if (v === fieldDefault() || !Object.values(FIELD).includes(v)) return;
+  $('cBg').value = fieldDefault();
+  colors = readColors(); buildLut();
+}
+
 function readColors() { return { y: hexToRgb($('cY').value), b: hexToRgb($('cB').value), bg: hexToRgb($('cBg').value) }; }
 
 // UI accents follow the car colours; the -line variants keep 3:1 contrast with the page background
@@ -1146,9 +1181,10 @@ function fixColors() {
   buildLut();
 }
 
-// back to the colours in the HTML value attributes
+// back to the colours in the HTML value attributes (the field takes the theme's stock colour)
 function resetColors() {
-  for (const id of ['cY', 'cB', 'cBg']) $(id).value = $(id).defaultValue;
+  for (const id of ['cY', 'cB']) $(id).value = $(id).defaultValue;
+  $('cBg').value = fieldDefault();
   colors = readColors();
   buildLut();
 }
@@ -1156,8 +1192,10 @@ function resetColors() {
 // indexed by cell value, so it doubles as the GIF palette
 function paletteRGB() {
   const dim = $('stuck').checked;
-  const ys = dim ? mix(colors.y, colors.bg, 0.55) : colors.y;
-  const bs = dim ? mix(colors.b, colors.bg, 0.55) : colors.b;
+  // mid-tone cars fade faster into a light field, so blend less there
+  const k = lum(colors.bg) > 0.18 ? 0.4 : 0.55;
+  const ys = dim ? mix(colors.y, colors.bg, k) : colors.y;
+  const bs = dim ? mix(colors.b, colors.bg, k) : colors.b;
   return [colors.bg, colors.y, colors.b, colors.bg, colors.bg, ys, bs, colors.bg];
 }
 
@@ -1908,6 +1946,16 @@ for (const b of document.querySelectorAll('[data-lang]')) b.addEventListener('cl
   try { localStorage.setItem('bml.lang', lang); } catch (e) {}
   applyLang();
 });
+$('theme').addEventListener('click', () => {
+  const next = isDark() ? 'light' : 'dark';
+  // picking the system theme drops the override, so the page follows the system again
+  if (next === (darkQuery.matches ? 'dark' : 'light')) delete document.documentElement.dataset.theme;
+  else document.documentElement.dataset.theme = next;
+  try {
+    if (document.documentElement.dataset.theme) localStorage.setItem('bml.theme', next); else localStorage.removeItem('bml.theme');
+  } catch (e) {}
+  themeLabel();
+});
 
 $('tools').addEventListener('click', (e) => {
   const b = e.target.closest('button.pick'); if (!b) return;
@@ -1945,11 +1993,11 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('keyup', (e) => { if (e.code === 'ArrowRight') endHold(); });
 window.addEventListener('blur', endHold);
 
-// accent contrast depends on the page background; on a scheme change, wait a frame so the new tokens apply
-const darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-const onSchemeChange = () => requestAnimationFrame(applyAccents);
+// accents and the stock field colour follow the theme; on a scheme change, wait a frame so the new tokens apply
+const onTheme = () => { syncField(); applyAccents(); };
+const onSchemeChange = () => { themeLabel(); requestAnimationFrame(onTheme); };
 if (darkQuery.addEventListener) darkQuery.addEventListener('change', onSchemeChange); else darkQuery.addListener(onSchemeChange);
-new MutationObserver(applyAccents).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+new MutationObserver(onTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
 let resizeFrame = 0;
 new ResizeObserver(() => {
@@ -1960,6 +2008,7 @@ window.addEventListener('resize', fitCanvas);
 
 
 // ── Init ────────────────────────────────────────────────────
+$('cBg').value = fieldDefault();
 colors = readColors();
 setupCanvas();
 buildLut();

@@ -17,7 +17,6 @@ Possible additions, roughly from most to least useful. None of these are planned
 ## Interface
 - **Offline and installable.** A web app manifest and a service worker (this adds files, so the app would no longer be strictly a single file).
 - **Accessibility.** A text summary of the grid state for screen readers, and less motion when "reduce motion" is on.
-- **Theme switch.** A manual light / dark toggle; the CSS already supports `data-theme`.
 
 ## Project
 - **Automated tests.** A headless-browser regression test (patterns, outcome detection, exports, both languages) to run before each release.
