@@ -712,8 +712,7 @@ function createSweep(job) {
   function stepOne(out) {
     const m = stepYellow(g, N, H) + stepBlue(g, N, H);
     t++;
-    const v = cars ? m / cars : 1;
-    vh[t - 1] = v;
+    vh[t - 1] = cars ? m / cars : 1;
     if (cars === 0) return finish(out, 'free', 1, 0);
     if (m === 0) return finish(out, 'jam', 0, lastMove);
     lastMove = t;
@@ -798,7 +797,7 @@ function fillBlock(g, N, density, share, rand) {
 }
 
 // a square of each colour, centred on (N/4, N/4) and (3N/4, 3N/4)
-function fillClusters(g, N, density, rand) {
+function fillClusters(g, N, density) {
   g.fill(0);
   const s = Math.min(N >> 1, Math.max(1, Math.round(Math.sqrt(density * N * N / 2)))), a = (N >> 2) - (s >> 1), b = a + (N >> 1);
   for (let y = 0; y < s; y++) for (let x = 0; x < s; x++) {
@@ -1239,7 +1238,7 @@ function place(keep) {
   else if (tpl === 'worst') fillWorst(g, N);
   else if (tpl === 'seedjam') fillSeedJam(g, N, density, share, rand);
   else if (tpl === 'block') fillBlock(g, N, density, share, rand);
-  else if (tpl === 'clusters') fillClusters(g, N, density, rand);
+  else if (tpl === 'clusters') fillClusters(g, N, density);
   else if (tpl === 'cross') fillCross(g, N, density);
   else if (tpl === 'checker') fillChecker(g, N, Math.max(1, +$('cell').value));
   else g.fill(0);
